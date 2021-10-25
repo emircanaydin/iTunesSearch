@@ -18,7 +18,7 @@ class WrapperInfoComponent: GenericBaseView<WrapperInfoComponentData> {
         temp.setCustomSpacing(5, after: artistName)
         temp.setCustomSpacing(3, after: trackName)
         return temp
-    }
+    }()
     
     private lazy var artistName: UILabel = {
         let temp = UILabel()
