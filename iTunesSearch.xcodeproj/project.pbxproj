@@ -25,6 +25,8 @@
 		9028DA5A272756AF00FC7CF6 /* PriceContainerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA59272756AF00FC7CF6 /* PriceContainerData.swift */; };
 		9028DA5C2727571000FC7CF6 /* PriceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA5B2727571000FC7CF6 /* PriceContainer.swift */; };
 		9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA5E2727578700FC7CF6 /* ColorHelper.swift */; };
+		9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA6127275E7200FC7CF6 /* WrapperInfoComponentData.swift */; };
+		9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA6327275EBD00FC7CF6 /* WrapperInfoComponent.swift */; };
 		903A791A27263E50004A722C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791927263E50004A722C /* AppDelegate.swift */; };
 		903A791C27263E50004A722C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791B27263E50004A722C /* SceneDelegate.swift */; };
 		903A791E27263E50004A722C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791D27263E50004A722C /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 		9028DA59272756AF00FC7CF6 /* PriceContainerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainerData.swift; sourceTree = "<group>"; };
 		9028DA5B2727571000FC7CF6 /* PriceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainer.swift; sourceTree = "<group>"; };
 		9028DA5E2727578700FC7CF6 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		9028DA6127275E7200FC7CF6 /* WrapperInfoComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperInfoComponentData.swift; sourceTree = "<group>"; };
+		9028DA6327275EBD00FC7CF6 /* WrapperInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperInfoComponent.swift; sourceTree = "<group>"; };
 		903A791627263E50004A722C /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903A791927263E50004A722C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		903A791B27263E50004A722C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9028DA6027275E5400FC7CF6 /* WrapperInfo */,
 				9028DA472727521300FC7CF6 /* CustomImageView */,
 				9028DA582727568000FC7CF6 /* PriceContainer */,
 			);
@@ -264,6 +269,15 @@
 				9028DA5E2727578700FC7CF6 /* ColorHelper.swift */,
 			);
 			path = ColorHelper;
+			sourceTree = "<group>";
+		};
+		9028DA6027275E5400FC7CF6 /* WrapperInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9028DA6127275E7200FC7CF6 /* WrapperInfoComponentData.swift */,
+				9028DA6327275EBD00FC7CF6 /* WrapperInfoComponent.swift */,
+			);
+			path = WrapperInfo;
 			sourceTree = "<group>";
 		};
 		903A790D27263E50004A722C = {
@@ -465,6 +479,7 @@
 				9028DA282726E31F00FC7CF6 /* EndpointHelper.swift in Sources */,
 				9028DA5A272756AF00FC7CF6 /* PriceContainerData.swift in Sources */,
 				9028DA522727544100FC7CF6 /* CustomImageViewComponent.swift in Sources */,
+				9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */,
 				9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */,
 				9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */,
 				9028DA57272754FA00FC7CF6 /* ImageCacheManager.swift in Sources */,
@@ -481,6 +496,7 @@
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				903A791C27263E50004A722C /* SceneDelegate.swift in Sources */,
+				9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
