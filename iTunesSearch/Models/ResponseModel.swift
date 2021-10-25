@@ -20,9 +20,13 @@ struct SearchResponse: Codable {
 // MARK: - Wrapper
 struct Wrapper: Codable {
     let artistID: Int?
-    let collectionID, trackID: Int
-    let artistName, collectionName, trackName: String
-    let collectionViewURL, trackViewURL: String
+    let collectionID: Int
+    let trackID: Int
+    let artistName: String
+    let collectionName: String
+    let trackName: String
+    let collectionViewURL: String
+    let trackViewURL: String
     let artworkUrl100: String
     let collectionPrice: Double?
     let releaseDate: Date

@@ -16,7 +16,7 @@ struct SearchRequest: Codable {
     
     init (term: String, entity: String, offset: Int) {
         self.term = term
-        self.entity = media
+        self.entity = entity
         self.offset = offset
     }
 }
