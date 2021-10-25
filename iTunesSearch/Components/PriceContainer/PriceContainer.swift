@@ -28,11 +28,20 @@ class PriceContainer: GenericBaseView<PriceContainerData> {
         return temp
     }()
     
+    // MARK: - Override Functions
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addComponents()
     }
     
+    override func loadDataView() {
+        super.loadDataView()
+        guard let data = returnData() else { return }
+        
+        priceLabel.text = "₺\(data.trackPrice)"
+    }
+    
+    // MARK: - Private Functions
     private func addComponents() {
         addSubview(containerView)
         containerView.addSubview(priceLabel)
@@ -47,12 +56,5 @@ class PriceContainer: GenericBaseView<PriceContainerData> {
             priceLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             priceLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
         ])
-    }
-    
-    override func loadDataView() {
-        super.loadDataView()
-        guard let data = returnData() else { return }
-        
-        priceLabel.text = "₺\(data.trackPrice)"
     }
 }

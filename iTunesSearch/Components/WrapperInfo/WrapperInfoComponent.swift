@@ -59,6 +59,7 @@ class WrapperInfoComponent: GenericBaseView<WrapperInfoComponentData> {
         return temp
     }()
     
+    // MARK: - Override Functions
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addComponents()
@@ -71,6 +72,7 @@ class WrapperInfoComponent: GenericBaseView<WrapperInfoComponentData> {
         collectionName.text = data.collectionName
     }
     
+    // MARK: - Private Functions
     private func addComponents() {
         addSubview(stackView)
         

@@ -18,11 +18,20 @@ class CustomImageViewComponentContainer: GenericBaseView<CustomImageViewComponen
         return temp
     }()
     
+    // MARK: - Override Functions
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addCustomImageView()
     }
     
+    override func loadDataView() {
+        super.loadDataView()
+        guard let data = returnData() else { return }
+        customImageView.setData(componentData: data)
+        customImageView.contentMode = data.contentMode
+    }
+    
+    // MARK: - Private Functions
     private func addCustomImageView() {
         addSubview(customImageView)
         
@@ -34,12 +43,5 @@ class CustomImageViewComponentContainer: GenericBaseView<CustomImageViewComponen
             customImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
         ])
-    }
-    
-    override func loadDataView() {
-        super.loadDataView()
-        guard let data = returnData() else { return }
-        customImageView.setData(componentData: data)
-        customImageView.contentMode = data.contentMode
     }
 }

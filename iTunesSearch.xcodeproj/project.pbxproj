@@ -27,6 +27,8 @@
 		9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA5E2727578700FC7CF6 /* ColorHelper.swift */; };
 		9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA6127275E7200FC7CF6 /* WrapperInfoComponentData.swift */; };
 		9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA6327275EBD00FC7CF6 /* WrapperInfoComponent.swift */; };
+		9028DA672727628500FC7CF6 /* WrapperCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA662727628500FC7CF6 /* WrapperCardData.swift */; };
+		9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA692727630800FC7CF6 /* WrapperCard.swift */; };
 		903A791A27263E50004A722C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791927263E50004A722C /* AppDelegate.swift */; };
 		903A791C27263E50004A722C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791B27263E50004A722C /* SceneDelegate.swift */; };
 		903A791E27263E50004A722C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791D27263E50004A722C /* ViewController.swift */; };
@@ -74,6 +76,8 @@
 		9028DA5E2727578700FC7CF6 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		9028DA6127275E7200FC7CF6 /* WrapperInfoComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperInfoComponentData.swift; sourceTree = "<group>"; };
 		9028DA6327275EBD00FC7CF6 /* WrapperInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperInfoComponent.swift; sourceTree = "<group>"; };
+		9028DA662727628500FC7CF6 /* WrapperCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperCardData.swift; sourceTree = "<group>"; };
+		9028DA692727630800FC7CF6 /* WrapperCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperCard.swift; sourceTree = "<group>"; };
 		903A791627263E50004A722C /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903A791927263E50004A722C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		903A791B27263E50004A722C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9028DA652727627900FC7CF6 /* WrapperCard */,
 				9028DA6027275E5400FC7CF6 /* WrapperInfo */,
 				9028DA472727521300FC7CF6 /* CustomImageView */,
 				9028DA582727568000FC7CF6 /* PriceContainer */,
@@ -278,6 +283,15 @@
 				9028DA6327275EBD00FC7CF6 /* WrapperInfoComponent.swift */,
 			);
 			path = WrapperInfo;
+			sourceTree = "<group>";
+		};
+		9028DA652727627900FC7CF6 /* WrapperCard */ = {
+			isa = PBXGroup;
+			children = (
+				9028DA692727630800FC7CF6 /* WrapperCard.swift */,
+				9028DA662727628500FC7CF6 /* WrapperCardData.swift */,
+			);
+			path = WrapperCard;
 			sourceTree = "<group>";
 		};
 		903A790D27263E50004A722C = {
@@ -491,12 +505,14 @@
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
 				9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
+				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA4E2727532000FC7CF6 /* GenericBaseView.swift in Sources */,
 				9028DA492727522800FC7CF6 /* CustomImageViewComponentData.swift in Sources */,
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				903A791C27263E50004A722C /* SceneDelegate.swift in Sources */,
 				9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */,
+				9028DA672727628500FC7CF6 /* WrapperCardData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
