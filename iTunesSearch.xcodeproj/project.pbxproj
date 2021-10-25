@@ -12,6 +12,10 @@
 		9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA322726E63300FC7CF6 /* SearchRequest.swift */; };
 		9028DA362726E6FC00FC7CF6 /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 9028DA352726E6FC00FC7CF6 /* DefaultNetworkOperationPackage */; };
 		9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA372726E72C00FC7CF6 /* SearchServiceProvider.swift */; };
+		9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */; };
+		9028DA402726EEAD00FC7CF6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9028DA3F2726EEAD00FC7CF6 /* RxSwift */; };
+		9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA422726EFF600FC7CF6 /* ResponseModel.swift */; };
+		9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */; };
 		903A791A27263E50004A722C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791927263E50004A722C /* AppDelegate.swift */; };
 		903A791C27263E50004A722C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791B27263E50004A722C /* SceneDelegate.swift */; };
 		903A791E27263E50004A722C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791D27263E50004A722C /* ViewController.swift */; };
@@ -45,6 +49,9 @@
 		9028DA2C2726E4B500FC7CF6 /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
 		9028DA322726E63300FC7CF6 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		9028DA372726E72C00FC7CF6 /* SearchServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceProvider.swift; sourceTree = "<group>"; };
+		9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManagerProtocol.swift; sourceTree = "<group>"; };
+		9028DA422726EFF600FC7CF6 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManager.swift; sourceTree = "<group>"; };
 		903A791627263E50004A722C /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903A791927263E50004A722C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		903A791B27263E50004A722C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9028DA402726EEAD00FC7CF6 /* RxSwift in Frameworks */,
 				9028DA362726E6FC00FC7CF6 /* DefaultNetworkOperationPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +152,31 @@
 			path = RequestModels;
 			sourceTree = "<group>";
 		};
+		9028DA392726EE5600FC7CF6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */ = {
+			isa = PBXGroup;
+			children = (
+				9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */,
+				9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */,
+			);
+			path = SearchOperationManager;
+			sourceTree = "<group>";
+		};
+		9028DA412726EFE500FC7CF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9028DA422726EFF600FC7CF6 /* ResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		903A790D27263E50004A722C = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +200,8 @@
 		903A791827263E50004A722C /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				9028DA412726EFE500FC7CF6 /* Models */,
+				9028DA392726EE5600FC7CF6 /* Managers */,
 				9028DA292726E48F00FC7CF6 /* BaseModules */,
 				9028DA262726E2E600FC7CF6 /* NetworkModules */,
 				903A791927263E50004A722C /* AppDelegate.swift */,
@@ -215,6 +250,7 @@
 			name = iTunesSearch;
 			packageProductDependencies = (
 				9028DA352726E6FC00FC7CF6 /* DefaultNetworkOperationPackage */,
+				9028DA3F2726EEAD00FC7CF6 /* RxSwift */,
 			);
 			productName = iTunesSearch;
 			productReference = 903A791627263E50004A722C /* iTunesSearch.app */;
@@ -290,6 +326,7 @@
 			mainGroup = 903A790D27263E50004A722C;
 			packageReferences = (
 				9028DA342726E6FC00FC7CF6 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
+				9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 903A791727263E50004A722C /* Products */;
 			projectDirPath = "";
@@ -335,8 +372,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9028DA282726E31F00FC7CF6 /* EndpointHelper.swift in Sources */,
+				9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */,
 				9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */,
 				903A791E27263E50004A722C /* ViewController.swift in Sources */,
+				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
+				9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
@@ -714,6 +754,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -721,6 +769,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9028DA342726E6FC00FC7CF6 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;
 			productName = DefaultNetworkOperationPackage;
+		};
+		9028DA3F2726EEAD00FC7CF6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
