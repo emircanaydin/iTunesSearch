@@ -7,6 +7,9 @@
 
 import Foundation
 
+typealias BaseUrl = EndpointHelper.BaseUrl
+typealias Paths = EndpointHelper.Paths
+
 enum EndpointHelper {
     
     enum BaseUrl: String {
