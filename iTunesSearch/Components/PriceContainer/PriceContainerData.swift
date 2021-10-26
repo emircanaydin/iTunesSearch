@@ -11,7 +11,7 @@ class PriceContainerData {
     
     private(set) var trackPrice: Double
     
-    init (trackPrice: Double) {
-        self.trackPrice = trackPrice
+    init (trackPrice: Double?) {
+        self.trackPrice = trackPrice ?? 0
     }
 }

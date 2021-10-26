@@ -28,6 +28,8 @@ struct Wrapper: Codable {
     let collectionViewURL: String
     let trackViewURL: String
     let artworkUrl100: String
+    let trackPrice: Double?
     let collectionPrice: Double?
     let releaseDate: Date
 }
+
