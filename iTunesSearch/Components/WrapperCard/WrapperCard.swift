@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WrapperCard: GenericBaseView<WrapperCardData> {
+class WrapperCard: GenericBaseView<GenericDataProtocol> {
     
     private lazy var stackView: UIStackView = {
         let temp = UIStackView(arrangedSubviews: [imageContainer, wrapperInfo, priceContainer])
@@ -49,7 +49,7 @@ class WrapperCard: GenericBaseView<WrapperCardData> {
     
     override func loadDataView() {
         super.loadDataView()
-        guard let data = returnData() else { return }
+        guard let data = returnData() as? WrapperCardData else { return }
         imageContainer.setData(by: data.imageData)
         wrapperInfo.setData(by: data.wrapperInfoData)
         priceContainer.setData(by: data.priceContainerData)

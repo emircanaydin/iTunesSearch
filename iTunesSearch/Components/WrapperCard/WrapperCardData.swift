@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WrapperCardData {
+class WrapperCardData: GenericDataProtocol {
     
     private(set) var imageData: CustomImageViewComponentData
     private(set) var wrapperInfoData: WrapperInfoComponentData
