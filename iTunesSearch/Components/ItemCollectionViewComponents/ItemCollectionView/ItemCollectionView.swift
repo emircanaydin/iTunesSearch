@@ -29,7 +29,7 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
     // MARK: - Override Functions
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
-        addMajorViewComponents()
+        addViewComponents()
     }
     
     // MARK: - Private Functions

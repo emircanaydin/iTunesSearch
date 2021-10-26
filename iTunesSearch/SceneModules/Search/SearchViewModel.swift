@@ -53,7 +53,7 @@ class SearchViewModel {
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
-        print(term)
+        print(term ?? "")
     }
 }
 
