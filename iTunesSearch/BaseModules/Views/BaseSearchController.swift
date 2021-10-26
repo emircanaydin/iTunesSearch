@@ -11,9 +11,13 @@ class BaseSearchController<V>: UISearchController {
     
     var viewModel: V!
     
-    convenience init(viewModel: V) {
-        self.init()
+    init(viewModel: V) {
+        super.init(searchResultsController: nil)
         self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {

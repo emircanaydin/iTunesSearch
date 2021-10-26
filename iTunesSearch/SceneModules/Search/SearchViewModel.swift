@@ -28,7 +28,12 @@ class SearchViewModel {
         searchViewStateCompletion = completion
     }
     
-    // MARK: - PrivateMethods
+    func getSearchControllerComponentData() -> SearchControllerComponentData {
+        return formatter.getSearchControllerComponentData(with: searchControllerTextChangeListener)
+    }
+ 
+    
+    // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {
         operationManager.subscribeDataPublisher { [weak self] result in
             switch result {
@@ -45,6 +50,10 @@ class SearchViewModel {
         formatter.paginationInfo.fetching = false
         viewData = response
         searchViewStateCompletion?(.done)
+    }
+    
+    private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
+        print("term")
     }
 }
 

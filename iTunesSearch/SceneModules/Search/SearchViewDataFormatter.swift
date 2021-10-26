@@ -9,6 +9,11 @@ import Foundation
 
 class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     
+    private var componentData: SearchResponse?
+    private var list: [Wrapper] = [Wrapper]()
+    
+    var paginationInfo: PaginationInfo = PaginationInfo()
+    
     func getNumberOfSection() -> Int {
         return 1
     }
@@ -40,11 +45,8 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         return list[index].trackID
     }
     
-    
-    private var componentData: SearchResponse?
-    private var list: [Wrapper] = [Wrapper]()
-    
-    var paginationInfo: PaginationInfo = PaginationInfo()
-    
+    func getSearchControllerComponentData(with listener: (String?) -> Void) -> SearchControllerComponentData {
+        return SearchControllerComponentData().setTextChangeListener(by: listener)
+    }
     
 }
