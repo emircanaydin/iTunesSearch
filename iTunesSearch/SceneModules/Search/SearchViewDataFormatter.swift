@@ -45,7 +45,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         return list[index].trackID
     }
     
-    func getSearchControllerComponentData(with listener: (String?) -> Void) -> SearchControllerComponentData {
+    func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData {
         return SearchControllerComponentData().setTextChangeListener(by: listener)
     }
     

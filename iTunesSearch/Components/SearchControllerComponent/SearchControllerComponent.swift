@@ -10,6 +10,11 @@ import UIKit
 
 class SearchControllerComponent: BaseSearchController<SearchControllerComponentData> {
     
+    override func prepareViewControllerConfigurations() {
+        super.prepareViewControllerConfigurations()
+        self.searchResultsUpdater = self
+    }
+    
 }
 
 // MARK: - UISearchResultsUpdating
@@ -17,7 +22,7 @@ extension SearchControllerComponent: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         // Check if term count is more than 2
-        guard let term = searchController.searchBar.text, term.count < 2 else {
+        guard let term = searchController.searchBar.text, term.count > 2 else {
             return
         }
         

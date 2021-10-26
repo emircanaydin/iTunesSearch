@@ -12,6 +12,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     private var searchControllerComponent: SearchControllerComponent!
     
     override func prepareViewControllerConfigurations() {
+        view.backgroundColor = .white
         addSearchComponent()
     }
     

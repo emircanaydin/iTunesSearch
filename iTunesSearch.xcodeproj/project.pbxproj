@@ -47,10 +47,8 @@
 		9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA952728987E00FC7CF6 /* BaseViewController.swift */; };
 		9028DA982728992900FC7CF6 /* BaseSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA972728992900FC7CF6 /* BaseSearchController.swift */; };
 		9028DA9A2728AEF700FC7CF6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA992728AEF700FC7CF6 /* SearchViewController.swift */; };
+		9028DA9C2728B39F00FC7CF6 /* SearchViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA9B2728B39F00FC7CF6 /* SearchViewBuilder.swift */; };
 		903A791A27263E50004A722C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791927263E50004A722C /* AppDelegate.swift */; };
-		903A791C27263E50004A722C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791B27263E50004A722C /* SceneDelegate.swift */; };
-		903A791E27263E50004A722C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A791D27263E50004A722C /* ViewController.swift */; };
-		903A792127263E50004A722C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903A791F27263E50004A722C /* Main.storyboard */; };
 		903A792327263E54004A722C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903A792227263E54004A722C /* Assets.xcassets */; };
 		903A792627263E54004A722C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903A792427263E54004A722C /* LaunchScreen.storyboard */; };
 		903A793127263E55004A722C /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793027263E55004A722C /* iTunesSearchTests.swift */; };
@@ -114,11 +112,9 @@
 		9028DA952728987E00FC7CF6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9028DA972728992900FC7CF6 /* BaseSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchController.swift; sourceTree = "<group>"; };
 		9028DA992728AEF700FC7CF6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9028DA9B2728B39F00FC7CF6 /* SearchViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewBuilder.swift; sourceTree = "<group>"; };
 		903A791627263E50004A722C /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		903A791927263E50004A722C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		903A791B27263E50004A722C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		903A791D27263E50004A722C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		903A792027263E50004A722C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		903A792227263E54004A722C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		903A792527263E54004A722C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		903A792727263E54004A722C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -390,6 +386,7 @@
 				9028DA8927284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift */,
 				9028DA8D27284F1000FC7CF6 /* SearchViewDataFormatter.swift */,
 				9028DA992728AEF700FC7CF6 /* SearchViewController.swift */,
+				9028DA9B2728B39F00FC7CF6 /* SearchViewBuilder.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -434,9 +431,6 @@
 				9028DA412726EFE500FC7CF6 /* Models */,
 				9028DA54272754D900FC7CF6 /* Utilities */,
 				903A791927263E50004A722C /* AppDelegate.swift */,
-				903A791B27263E50004A722C /* SceneDelegate.swift */,
-				903A791D27263E50004A722C /* ViewController.swift */,
-				903A791F27263E50004A722C /* Main.storyboard */,
 				903A792227263E54004A722C /* Assets.xcassets */,
 				903A792427263E54004A722C /* LaunchScreen.storyboard */,
 				903A792727263E54004A722C /* Info.plist */,
@@ -575,7 +569,6 @@
 			files = (
 				903A792627263E54004A722C /* LaunchScreen.storyboard in Resources */,
 				903A792327263E54004A722C /* Assets.xcassets in Resources */,
-				903A792127263E50004A722C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,7 +606,6 @@
 				9028DA4C272752CE00FC7CF6 /* BaseView.swift in Sources */,
 				9028DA70272836B700FC7CF6 /* ItemCollectionCellView.swift in Sources */,
 				9028DA5C2727571000FC7CF6 /* PriceContainer.swift in Sources */,
-				903A791E27263E50004A722C /* ViewController.swift in Sources */,
 				9028DA50272753D600FC7CF6 /* CustomImageViewContainer.swift in Sources */,
 				9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */,
 				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
@@ -635,7 +627,7 @@
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				9028DA94272892C000FC7CF6 /* SearchControllerComponent.swift in Sources */,
-				903A791C27263E50004A722C /* SceneDelegate.swift in Sources */,
+				9028DA9C2728B39F00FC7CF6 /* SearchViewBuilder.swift in Sources */,
 				9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */,
 				9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */,
 				9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */,
@@ -677,14 +669,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		903A791F27263E50004A722C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				903A792027263E50004A722C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		903A792427263E54004A722C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -824,7 +808,6 @@
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -852,7 +835,6 @@
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
