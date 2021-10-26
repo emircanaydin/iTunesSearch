@@ -37,6 +37,8 @@
 		9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA7B2728471700FC7CF6 /* GenericDataProtocol.swift */; };
 		9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA7D272847A400FC7CF6 /* LoadingCellView.swift */; };
 		9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8027284A0300FC7CF6 /* UIView+Extensions.swift */; };
+		9028DA8527284CB100FC7CF6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8427284CB100FC7CF6 /* SearchViewModel.swift */; };
+		9028DA8827284CD400FC7CF6 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8727284CD400FC7CF6 /* SearchViewState.swift */; };
 		9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8927284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift */; };
 		9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */; };
 		9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8D27284F1000FC7CF6 /* SearchViewDataFormatter.swift */; };
@@ -97,6 +99,8 @@
 		9028DA7B2728471700FC7CF6 /* GenericDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataProtocol.swift; sourceTree = "<group>"; };
 		9028DA7D272847A400FC7CF6 /* LoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellView.swift; sourceTree = "<group>"; };
 		9028DA8027284A0300FC7CF6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9028DA8427284CB100FC7CF6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		9028DA8727284CD400FC7CF6 /* SearchViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewState.swift; sourceTree = "<group>"; };
 		9028DA8927284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataFormatterProtocol.swift; sourceTree = "<group>"; };
 		9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
 		9028DA8D27284F1000FC7CF6 /* SearchViewDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataFormatter.swift; sourceTree = "<group>"; };
@@ -588,9 +592,12 @@
 				9028DA50272753D600FC7CF6 /* CustomImageViewContainer.swift in Sources */,
 				9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */,
 				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
+				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
+				9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */,
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
 				9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */,
 				9028DA74272838E300FC7CF6 /* ItemCollectionViewData.swift in Sources */,
+				9028DA8527284CB100FC7CF6 /* SearchViewModel.swift in Sources */,
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
@@ -601,9 +608,11 @@
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				903A791C27263E50004A722C /* SceneDelegate.swift in Sources */,
+				9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */,
 				9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */,
 				9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */,
 				9028DA672727628500FC7CF6 /* WrapperCardData.swift in Sources */,
+				9028DA8827284CD400FC7CF6 /* SearchViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
