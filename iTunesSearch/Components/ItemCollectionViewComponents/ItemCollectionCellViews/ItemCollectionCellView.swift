@@ -33,7 +33,7 @@ class ItemCollectionCellView: BaseCollectionViewCell {
     }
     
     // MARK: - Public Functions
-    func setData(by value: WrapperCardData) {
+    func setData(by value: GenericDataProtocol) {
         wrapperCard.setData(by: value)
     }
 }
