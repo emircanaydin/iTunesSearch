@@ -54,6 +54,9 @@
 		903A793127263E55004A722C /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793027263E55004A722C /* iTunesSearchTests.swift */; };
 		903A793B27263E55004A722C /* iTunesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793A27263E55004A722C /* iTunesSearchUITests.swift */; };
 		903A793D27263E55004A722C /* iTunesSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793C27263E55004A722C /* iTunesSearchUITestsLaunchTests.swift */; };
+		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
+		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
+		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +126,9 @@
 		903A793627263E55004A722C /* iTunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		903A793A27263E55004A722C /* iTunesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITests.swift; sourceTree = "<group>"; };
 		903A793C27263E55004A722C /* iTunesSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
+		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
+		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,7 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90D6E2652729ADD100764191 /* SegmentedControlComponent */,
 				9028DA8F2728925B00FC7CF6 /* SearchControllerComponent */,
 				9028DA6E2728369800FC7CF6 /* ItemCollectionViewComponents */,
 				9028DA652727627900FC7CF6 /* WrapperCard */,
@@ -455,6 +462,16 @@
 			path = iTunesSearchUITests;
 			sourceTree = "<group>";
 		};
+		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */,
+				90D6E2662729AE4100764191 /* SegmentedControlData.swift */,
+				90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */,
+			);
+			path = SegmentedControlComponent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -599,6 +616,7 @@
 				9028DA76272838EB00FC7CF6 /* ItemCollectionView.swift in Sources */,
 				9028DA5A272756AF00FC7CF6 /* PriceContainerData.swift in Sources */,
 				9028DA522727544100FC7CF6 /* CustomImageViewComponent.swift in Sources */,
+				90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */,
 				9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */,
 				9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */,
 				9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */,
@@ -612,11 +630,13 @@
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
 				9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */,
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
+				90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */,
 				9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */,
 				9028DA74272838E300FC7CF6 /* ItemCollectionViewData.swift in Sources */,
 				9028DA8527284CB100FC7CF6 /* SearchViewModel.swift in Sources */,
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
+				90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
 				9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */,

@@ -63,7 +63,8 @@ class SearchViewModel {
         self?.formatter.clearData(with: { finish in
             
             guard finish else { return }
-            self?.searchTerm = (term ?? "").replacingOccurrences(of: " ", with: +)
+            self?.searchTerm = term ?? ""
+            self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
             self?.search()
         })
     }
