@@ -19,16 +19,28 @@ class SearchViewModel {
     
     private var viewData: SearchResponse?
     
+    private var searchTerm: String!
+    
     init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol) {
         self.formatter = formatter
         self.operationManager = operationManager
+        subscribeOperationMangerPublisher()
+    }
+    
+    func search() {
+        operationManager.search(with: SearchRequest(term: searchTerm, entity: "musicTrack", offset: formatter.paginationInfo.offset))
     }
     
     func subscribeSearchViewState(with completion: @escaping SearchViewStateBlock) {
         searchViewStateCompletion = completion
     }
     
-    // MARK: - PrivateMethods
+    func getSearchControllerComponentData() -> SearchControllerComponentData {
+        return formatter.getSearchControllerComponentData(with: searchControllerTextChangeListener)
+    }
+ 
+    
+    // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {
         operationManager.subscribeDataPublisher { [weak self] result in
             switch result {
@@ -38,13 +50,22 @@ class SearchViewModel {
                 self?.formatter.setData(with: response)
                 self?.dataHandler(with: response)
             }
-        }
+        }.disposed(by: disposeBag)
     }
     
     private func dataHandler(with response: SearchResponse?) {
         formatter.paginationInfo.fetching = false
         viewData = response
         searchViewStateCompletion?(.done)
+    }
+    
+    private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
+        self?.formatter.clearData(with: { finish in
+            
+            guard finish else { return }
+            self?.searchTerm = (term ?? "").replacingOccurrences(of: " ", with: +)
+            self?.search()
+        })
     }
 }
 
@@ -71,7 +92,7 @@ extension SearchViewModel: ItemProviderProtocol {
         // Check to get more data
         guard formatter.paginationInfo.checkLoadingMore() else { return }
         formatter.paginationInfo.nextOffset()
-        //getdata
+        search()
     }
     
     func selectedItem(at index: Int) {

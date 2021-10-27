@@ -9,6 +9,11 @@ import Foundation
 
 class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     
+    private var componentData: SearchResponse?
+    private var list: [Wrapper] = [Wrapper]()
+    
+    var paginationInfo: PaginationInfo = PaginationInfo()
+    
     func getNumberOfSection() -> Int {
         return 1
     }
@@ -32,19 +37,23 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         return WrapperCardData(imageData: CustomImageViewComponentData(imageUrl: list[index].artworkUrl100),
                                wrapperInfoData: WrapperInfoComponentData(artistName: list[index].artistName,
                                                                          trackName: list[index].trackName,
-                                                                         collectionName: list[index].collectionName),
+                                                                         collectionName: list[index].collectionName ?? list[index].trackName),
                                priceContainerData: PriceContainerData(trackPrice: list[index].trackPrice))
     }
     
     func getItemId(at index: Int) -> Int {
-        return list[index].trackID
+        return list[index].trackId
     }
     
+    func clearData(with listener: @escaping (Bool) -> Void) {
+        listener(false)
+        self.paginationInfo.resultCount = 0
+        self.list.removeAll()
+        listener(true)
+    }
     
-    private var componentData: SearchResponse?
-    private var list: [Wrapper] = [Wrapper]()
-    
-    var paginationInfo: PaginationInfo = PaginationInfo()
-    
+    func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData {
+        return SearchControllerComponentData().setTextChangeListener(by: listener)
+    }
     
 }

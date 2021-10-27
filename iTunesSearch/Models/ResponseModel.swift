@@ -19,17 +19,15 @@ struct SearchResponse: Codable {
 
 // MARK: - Wrapper
 struct Wrapper: Codable {
-    let artistID: Int?
-    let collectionID: Int
-    let trackID: Int
+    let artistId: Int?
+    let collectionId: Int?
+    let trackId: Int
     let artistName: String
-    let collectionName: String
+    let collectionName: String?
     let trackName: String
-    let collectionViewURL: String
-    let trackViewURL: String
     let artworkUrl100: String
     let trackPrice: Double?
     let collectionPrice: Double?
-    let releaseDate: Date
+    let releaseDate: Date? = nil
 }
 
