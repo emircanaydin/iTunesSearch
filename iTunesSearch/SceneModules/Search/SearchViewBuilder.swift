@@ -17,6 +17,7 @@ class SearchViewBuilder {
         
         viewController.title = "iTunesSearch"
         viewController.navigationController?.setNavigationBarHidden(false, animated: false)
+        viewController.view.backgroundColor = ColorHelper.viewBackground.value
         
         // Set view controller appearance
         let apperance = UINavigationBarAppearance()

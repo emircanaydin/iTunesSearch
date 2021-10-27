@@ -13,9 +13,9 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     private var searchControllerComponent: SearchControllerComponent!
     
     override func prepareViewControllerConfigurations() {
-        view.backgroundColor = .white
         addSearchComponent()
         addSearchResultCollection()
+        addViewStateListener()
     }
     
     // MARK: - Private Methods
@@ -38,5 +38,16 @@ class SearchViewController: BaseViewController<SearchViewModel> {
             searchResultCollection.topAnchor.constraint(equalTo: view.topAnchor),
             searchResultCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+    private func addViewStateListener() {
+        viewModel.subscribeSearchViewState { [weak self] state in
+            switch state {
+            case .loading, .failure:
+                return
+            case .done:
+                self?.searchResultCollection.reloadCollectionView()
+            }
+        }
     }
 }
