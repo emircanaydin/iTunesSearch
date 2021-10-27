@@ -16,6 +16,6 @@ protocol SearchViewDataFormatterProtocol {
     func setData(with response: SearchResponse)
     func getItem(at index: Int) -> GenericDataProtocol?
     func getItemId(at index: Int) -> Int
-    func clearData()
+    func clearData(with listener: @escaping (Bool) -> Void)
     func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData
 }

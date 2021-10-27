@@ -60,9 +60,12 @@ class SearchViewModel {
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
-        self?.formatter.clearData()
-        self?.searchTerm = term ?? ""
-        self?.search()
+        self?.formatter.clearData(with: { finish in
+            
+            guard finish else { return }
+            self?.searchTerm = term ?? ""
+            self?.search()
+        })
     }
 }
 
