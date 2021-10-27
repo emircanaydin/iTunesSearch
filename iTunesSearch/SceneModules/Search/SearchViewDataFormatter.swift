@@ -37,12 +37,17 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         return WrapperCardData(imageData: CustomImageViewComponentData(imageUrl: list[index].artworkUrl100),
                                wrapperInfoData: WrapperInfoComponentData(artistName: list[index].artistName,
                                                                          trackName: list[index].trackName,
-                                                                         collectionName: list[index].collectionName),
+                                                                         collectionName: list[index].collectionName ?? list[index].trackName),
                                priceContainerData: PriceContainerData(trackPrice: list[index].trackPrice))
     }
     
     func getItemId(at index: Int) -> Int {
-        return list[index].trackID
+        return list[index].trackId
+    }
+    
+    func clearData() {
+        self.paginationInfo.resultCount = 0
+        self.list.removeAll()
     }
     
     func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData {
