@@ -20,10 +20,13 @@ enum ColorHelper: GenericValueProtocol {
             return #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
         case .darkGray:
             return #colorLiteral(red: 0.2823529412, green: 0.2823529412, blue: 0.2823529412, alpha: 1)
+        case .viewBackground:
+            return #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
         }
     }
     
     case priceContainerBackgorund
     case gray
     case darkGray
+    case viewBackground
 }

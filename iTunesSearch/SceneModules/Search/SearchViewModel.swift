@@ -19,9 +19,16 @@ class SearchViewModel {
     
     private var viewData: SearchResponse?
     
+    private var searchTerm: String!
+    
     init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol) {
         self.formatter = formatter
         self.operationManager = operationManager
+        subscribeOperationMangerPublisher()
+    }
+    
+    func search() {
+        operationManager.search(with: SearchRequest(term: searchTerm, entity: "musicTrack", offset: formatter.paginationInfo.offset))
     }
     
     func subscribeSearchViewState(with completion: @escaping SearchViewStateBlock) {
@@ -43,7 +50,7 @@ class SearchViewModel {
                 self?.formatter.setData(with: response)
                 self?.dataHandler(with: response)
             }
-        }
+        }.disposed(by: disposeBag)
     }
     
     private func dataHandler(with response: SearchResponse?) {
@@ -53,7 +60,9 @@ class SearchViewModel {
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
-        print(term ?? "")
+        self?.formatter.clearData()
+        self?.searchTerm = term ?? ""
+        self?.search()
     }
 }
 
@@ -80,7 +89,7 @@ extension SearchViewModel: ItemProviderProtocol {
         // Check to get more data
         guard formatter.paginationInfo.checkLoadingMore() else { return }
         formatter.paginationInfo.nextOffset()
-        //getdata
+        search()
     }
     
     func selectedItem(at index: Int) {
