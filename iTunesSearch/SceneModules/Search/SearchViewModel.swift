@@ -42,7 +42,7 @@ class SearchViewModel {
     func getSegmentedControlData() -> SegmentedControlData {
         return formatter.getSegmentedControllerData(with: self)
     }
- 
+    
     
     // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {
@@ -64,12 +64,11 @@ class SearchViewModel {
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
-        self?.formatter.clearData(with: { finish in
-            guard finish else { return }
-            self?.searchTerm = term ?? ""
-            self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
-            self?.search()
-        })
+        self?.formatter.clearData()
+        self?.searchTerm = term ?? ""
+        self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
+        self?.search()
+        
     }
 }
 
