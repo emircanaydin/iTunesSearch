@@ -18,4 +18,5 @@ protocol SearchViewDataFormatterProtocol {
     func getItemId(at index: Int) -> Int
     func clearData(with listener: @escaping (Bool) -> Void)
     func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData
+    func getSegmentedControllerData(with listener: SegmentedControlProtocol) -> SegmentedControlData
 }

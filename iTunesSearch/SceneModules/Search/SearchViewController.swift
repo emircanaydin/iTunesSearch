@@ -49,7 +49,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     private func addSearchResultCollection() {
         searchResultCollection.delegate = viewModel
         
-        segmentedControl.setData(by: SegmentedControlData(textColor: .red, selectorViewColor: .blue, selectorTextColor: .blue, buttonTitles: ["Music", "Movie", "Podcast", "Book"]))
+        segmentedControl.setData(by: viewModel.getSegmentedControlData())
         
         view.addSubview(mainStackView)
         

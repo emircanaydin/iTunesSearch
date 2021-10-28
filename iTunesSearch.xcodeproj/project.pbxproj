@@ -222,7 +222,6 @@
 		9028DA392726EE5600FC7CF6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				9028DA53272754B300FC7CF6 /* ImageCacheManager */,
 				9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */,
 			);
 			path = Managers;
@@ -279,13 +278,6 @@
 				9028DA972728992900FC7CF6 /* BaseSearchController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9028DA53272754B300FC7CF6 /* ImageCacheManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ImageCacheManager;
 			sourceTree = "<group>";
 		};
 		9028DA54272754D900FC7CF6 /* Utilities */ = {

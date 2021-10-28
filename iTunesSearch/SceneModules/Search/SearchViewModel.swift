@@ -38,6 +38,10 @@ class SearchViewModel {
     func getSearchControllerComponentData() -> SearchControllerComponentData {
         return formatter.getSearchControllerComponentData(with: searchControllerTextChangeListener)
     }
+    
+    func getSegmentedControlData() -> SegmentedControlData {
+        return formatter.getSegmentedControllerData(with: self)
+    }
  
     
     // MARK: - Private Methods
@@ -61,7 +65,6 @@ class SearchViewModel {
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
         self?.formatter.clearData(with: { finish in
-            
             guard finish else { return }
             self?.searchTerm = term ?? ""
             self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
@@ -99,6 +102,11 @@ extension SearchViewModel: ItemProviderProtocol {
     func selectedItem(at index: Int) {
         // go to detail page
     }
+}
+
+extension SearchViewModel: SegmentedControlProtocol {
     
-    
+    func changeIndex(to index: Int) {
+        print(index)
+    }
 }
