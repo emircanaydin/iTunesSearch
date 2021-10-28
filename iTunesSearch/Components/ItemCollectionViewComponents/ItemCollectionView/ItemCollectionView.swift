@@ -101,6 +101,11 @@ extension ItemCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
 extension ItemCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if isLoadingCell(for: indexPath) {
+            return CGSize(width: UIScreen.main.bounds.width - 40, height: 50)
+        }
+        
         let width = (UIScreen.main.bounds.width - 100) / 2
         return CGSize(width: width, height: 200)
     }
