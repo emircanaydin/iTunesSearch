@@ -75,6 +75,8 @@
 		9072284C272B623E0098FC6B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072284B272B623E0098FC6B /* PurchaseButton.swift */; };
 		9072284F272B644F0098FC6B /* DescriptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072284E272B644F0098FC6B /* DescriptionData.swift */; };
 		90722851272B64790098FC6B /* DescriptionTextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722850272B64790098FC6B /* DescriptionTextBlock.swift */; };
+		90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722853272B65CE0098FC6B /* CollectionBorderData.swift */; };
+		90722856272B662E0098FC6B /* CollectionBorderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722855272B662E0098FC6B /* CollectionBorderComponent.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -167,6 +169,8 @@
 		9072284B272B623E0098FC6B /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		9072284E272B644F0098FC6B /* DescriptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionData.swift; sourceTree = "<group>"; };
 		90722850272B64790098FC6B /* DescriptionTextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextBlock.swift; sourceTree = "<group>"; };
+		90722853272B65CE0098FC6B /* CollectionBorderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBorderData.swift; sourceTree = "<group>"; };
+		90722855272B662E0098FC6B /* CollectionBorderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBorderComponent.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90722852272B65280098FC6B /* CollectionBorderComponent */,
 				9072284D272B643C0098FC6B /* DescriptionTextBlock */,
 				90722848272B61DF0098FC6B /* PurchaseButton */,
 				90722843272B4D1A0098FC6B /* TrackInfoComponent */,
@@ -612,6 +617,15 @@
 			path = DescriptionTextBlock;
 			sourceTree = "<group>";
 		};
+		90722852272B65280098FC6B /* CollectionBorderComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722855272B662E0098FC6B /* CollectionBorderComponent.swift */,
+				90722853272B65CE0098FC6B /* CollectionBorderData.swift */,
+			);
+			path = CollectionBorderComponent;
+			sourceTree = "<group>";
+		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,6 +800,7 @@
 				90722811272AD7790098FC6B /* EmptyResultView.swift in Sources */,
 				9028DA50272753D600FC7CF6 /* CustomImageViewContainer.swift in Sources */,
 				9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */,
+				90722856272B662E0098FC6B /* CollectionBorderComponent.swift in Sources */,
 				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
 				90722818272AE9220098FC6B /* AtomicValue.swift in Sources */,
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
@@ -798,6 +813,7 @@
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */,
+				90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */,
 				90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
