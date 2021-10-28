@@ -102,6 +102,6 @@ extension ItemCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (UIScreen.main.bounds.width - 100) / 2
-        return CGSize(width: width, height: 180)
+        return CGSize(width: width, height: 200)
     }
 }
