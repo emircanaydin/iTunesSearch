@@ -16,15 +16,17 @@ class SearchViewModel {
     
     private var formatter: SearchViewDataFormatterProtocol
     private var operationManager: SearchOperationManagerProtocol
+    private var lottieManager: LottieManagerProtocol
     
     private var viewData: SearchResponse?
     
     private var searchTerm: String!
     private var mediaType: String = "musicTrack"
     
-    init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol) {
+    init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol, lottieManager: LottieManagerProtocol) {
         self.formatter = formatter
         self.operationManager = operationManager
+        self.lottieManager = lottieManager
         subscribeOperationMangerPublisher()
     }
     
@@ -44,6 +46,9 @@ class SearchViewModel {
         return formatter.getSegmentedControllerData(with: self)
     }
     
+    func getSearchTerm() -> String {
+        return searchTerm
+    }
     
     // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {
@@ -69,7 +74,6 @@ class SearchViewModel {
         self?.searchTerm = term ?? ""
         self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
         self?.search()
-        
     }
 }
 
@@ -107,8 +111,10 @@ extension SearchViewModel: ItemProviderProtocol {
 extension SearchViewModel: SegmentedControlProtocol {
     
     func changeIndex(to index: Int) {
+        lottieManager.onPreExecute()
         mediaType = formatter.getMediaType(with: index)
         formatter.clearData()
         search()
+        lottieManager.onPostExecute()
     }
 }

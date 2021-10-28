@@ -22,8 +22,14 @@ class SearchViewController: BaseViewController<SearchViewModel> {
         return temp
     }()
     
+    private lazy var searchResultTitleLabel: SearchResultTitleComponent = {
+        let temp = SearchResultTitleComponent()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
+    
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [segmentedControl, searchResultCollection])
+        let temp = UIStackView(arrangedSubviews: [segmentedControl, searchResultTitleLabel, searchResultCollection])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.axis = .vertical
         temp.distribution = .fill
@@ -69,6 +75,10 @@ class SearchViewController: BaseViewController<SearchViewModel> {
                 return
             case .done:
                 self?.searchResultCollection.reloadCollectionView()
+                
+                var searchTerm = self?.viewModel.getSearchTerm() ?? ""
+                searchTerm = searchTerm.replacingOccurrences(of: "+", with: " ")
+                self?.searchResultTitleLabel.setData(by: SearchResultTitleData(searchTerm: searchTerm))
             }
         }
     }

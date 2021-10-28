@@ -15,16 +15,19 @@ class PriceContainer: GenericBaseView<PriceContainerData> {
         temp.clipsToBounds = true
         temp.layer.cornerRadius = 8
         temp.backgroundColor = ColorHelper.priceContainerBackgorund.value
+        temp.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        temp.widthAnchor.constraint(equalToConstant: 50).isActive = true
         return temp
     }()
     
     private lazy var priceLabel: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        temp.font = UIFont.systemFont(ofSize: 10, weight: .regular)
         temp.text = " "
         temp.contentMode = .center
         temp.textAlignment = .center
+        temp.textColor = .white
         return temp
     }()
     

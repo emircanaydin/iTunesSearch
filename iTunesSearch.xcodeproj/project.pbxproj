@@ -54,6 +54,17 @@
 		903A793127263E55004A722C /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793027263E55004A722C /* iTunesSearchTests.swift */; };
 		903A793B27263E55004A722C /* iTunesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793A27263E55004A722C /* iTunesSearchUITests.swift */; };
 		903A793D27263E55004A722C /* iTunesSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A793C27263E55004A722C /* iTunesSearchUITestsLaunchTests.swift */; };
+		9072280F272AD76B0098FC6B /* EmptyResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072280E272AD76B0098FC6B /* EmptyResultViewData.swift */; };
+		90722811272AD7790098FC6B /* EmptyResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722810272AD7790098FC6B /* EmptyResultView.swift */; };
+		90722815272AE9040098FC6B /* loading_wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 90722814272AE9040098FC6B /* loading_wave.json */; };
+		90722818272AE9220098FC6B /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722817272AE9220098FC6B /* AtomicValue.swift */; };
+		9072281B272AE94C0098FC6B /* LottieManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281A272AE94C0098FC6B /* LottieManagerProtocol.swift */; };
+		9072281D272AE95B0098FC6B /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281C272AE95B0098FC6B /* LottieManager.swift */; };
+		90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281F272AE9B00098FC6B /* LottieViewController.swift */; };
+		90722823272AE9E60098FC6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90722822272AE9E60098FC6B /* Lottie */; };
+		90722825272AEA680098FC6B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722824272AEA680098FC6B /* UIApplication+Extension.swift */; };
+		9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072282C272B0B460098FC6B /* SearchResultTitleData.swift */; };
+		9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -126,6 +137,16 @@
 		903A793627263E55004A722C /* iTunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		903A793A27263E55004A722C /* iTunesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITests.swift; sourceTree = "<group>"; };
 		903A793C27263E55004A722C /* iTunesSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9072280E272AD76B0098FC6B /* EmptyResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultViewData.swift; sourceTree = "<group>"; };
+		90722810272AD7790098FC6B /* EmptyResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultView.swift; sourceTree = "<group>"; };
+		90722814272AE9040098FC6B /* loading_wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_wave.json; sourceTree = "<group>"; };
+		90722817272AE9220098FC6B /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		9072281A272AE94C0098FC6B /* LottieManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManagerProtocol.swift; sourceTree = "<group>"; };
+		9072281C272AE95B0098FC6B /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
+		9072281F272AE9B00098FC6B /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		90722824272AEA680098FC6B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		9072282C272B0B460098FC6B /* SearchResultTitleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleData.swift; sourceTree = "<group>"; };
+		9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleComponent.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -138,6 +159,7 @@
 			files = (
 				9028DA402726EEAD00FC7CF6 /* RxSwift in Frameworks */,
 				9028DA362726E6FC00FC7CF6 /* DefaultNetworkOperationPackage in Frameworks */,
+				90722823272AE9E60098FC6B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +244,7 @@
 		9028DA392726EE5600FC7CF6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				90722819272AE93C0098FC6B /* LottieManager */,
 				9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */,
 			);
 			path = Managers;
@@ -247,6 +270,8 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9072282B272B0B290098FC6B /* SearchResultTitleComponent */,
+				9072280D272AD7170098FC6B /* EmptyResultView */,
 				90D6E2652729ADD100764191 /* SegmentedControlComponent */,
 				9028DA8F2728925B00FC7CF6 /* SearchControllerComponent */,
 				9028DA6E2728369800FC7CF6 /* ItemCollectionViewComponents */,
@@ -283,6 +308,7 @@
 		9028DA54272754D900FC7CF6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				90722812272AE8F00098FC6B /* Resources */,
 				9028DA7F272849F700FC7CF6 /* Extensions */,
 				9028DA5D2727577E00FC7CF6 /* ColorHelper */,
 				9028DA55272754E000FC7CF6 /* ImageCacheManager */,
@@ -365,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				9028DA8027284A0300FC7CF6 /* UIView+Extensions.swift */,
+				90722824272AEA680098FC6B /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -372,6 +399,7 @@
 		9028DA8227284BFC00FC7CF6 /* SceneModules */ = {
 			isa = PBXGroup;
 			children = (
+				9072281E272AE9970098FC6B /* Lottie */,
 				9028DA8327284C9800FC7CF6 /* Search */,
 			);
 			path = SceneModules;
@@ -454,6 +482,66 @@
 			path = iTunesSearchUITests;
 			sourceTree = "<group>";
 		};
+		9072280D272AD7170098FC6B /* EmptyResultView */ = {
+			isa = PBXGroup;
+			children = (
+				90722810272AD7790098FC6B /* EmptyResultView.swift */,
+				9072280E272AD76B0098FC6B /* EmptyResultViewData.swift */,
+			);
+			path = EmptyResultView;
+			sourceTree = "<group>";
+		};
+		90722812272AE8F00098FC6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90722816272AE9060098FC6B /* AtomicType */,
+				90722813272AE8F50098FC6B /* LottieFiles */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		90722813272AE8F50098FC6B /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				90722814272AE9040098FC6B /* loading_wave.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		90722816272AE9060098FC6B /* AtomicType */ = {
+			isa = PBXGroup;
+			children = (
+				90722817272AE9220098FC6B /* AtomicValue.swift */,
+			);
+			path = AtomicType;
+			sourceTree = "<group>";
+		};
+		90722819272AE93C0098FC6B /* LottieManager */ = {
+			isa = PBXGroup;
+			children = (
+				9072281C272AE95B0098FC6B /* LottieManager.swift */,
+				9072281A272AE94C0098FC6B /* LottieManagerProtocol.swift */,
+			);
+			path = LottieManager;
+			sourceTree = "<group>";
+		};
+		9072281E272AE9970098FC6B /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				9072281F272AE9B00098FC6B /* LottieViewController.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		9072282B272B0B290098FC6B /* SearchResultTitleComponent */ = {
+			isa = PBXGroup;
+			children = (
+				9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */,
+				9072282C272B0B460098FC6B /* SearchResultTitleData.swift */,
+			);
+			path = SearchResultTitleComponent;
+			sourceTree = "<group>";
+		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +571,7 @@
 			packageProductDependencies = (
 				9028DA352726E6FC00FC7CF6 /* DefaultNetworkOperationPackage */,
 				9028DA3F2726EEAD00FC7CF6 /* RxSwift */,
+				90722822272AE9E60098FC6B /* Lottie */,
 			);
 			productName = iTunesSearch;
 			productReference = 903A791627263E50004A722C /* iTunesSearch.app */;
@@ -559,6 +648,7 @@
 			packageReferences = (
 				9028DA342726E6FC00FC7CF6 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
 				9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				90722821272AE9E50098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 903A791727263E50004A722C /* Products */;
 			projectDirPath = "";
@@ -577,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				903A792627263E54004A722C /* LaunchScreen.storyboard in Resources */,
+				90722815272AE9040098FC6B /* loading_wave.json in Resources */,
 				903A792327263E54004A722C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,13 +703,17 @@
 				9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */,
 				9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */,
 				9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */,
+				9072281D272AE95B0098FC6B /* LottieManager.swift in Sources */,
 				9028DA57272754FA00FC7CF6 /* ImageCacheManager.swift in Sources */,
 				9028DA4C272752CE00FC7CF6 /* BaseView.swift in Sources */,
 				9028DA70272836B700FC7CF6 /* ItemCollectionCellView.swift in Sources */,
 				9028DA5C2727571000FC7CF6 /* PriceContainer.swift in Sources */,
+				9072281B272AE94C0098FC6B /* LottieManagerProtocol.swift in Sources */,
+				90722811272AD7790098FC6B /* EmptyResultView.swift in Sources */,
 				9028DA50272753D600FC7CF6 /* CustomImageViewContainer.swift in Sources */,
 				9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */,
 				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
+				90722818272AE9220098FC6B /* AtomicValue.swift in Sources */,
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
 				9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */,
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
@@ -629,21 +724,26 @@
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */,
+				90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
+				9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */,
 				9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */,
 				9028DA4E2727532000FC7CF6 /* GenericBaseView.swift in Sources */,
 				9028DA9A2728AEF700FC7CF6 /* SearchViewController.swift in Sources */,
 				9028DA6D2728361100FC7CF6 /* BaseCollectionViewCell.swift in Sources */,
 				9028DA492727522800FC7CF6 /* CustomImageViewComponentData.swift in Sources */,
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
+				9072280F272AD76B0098FC6B /* EmptyResultViewData.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				9028DA94272892C000FC7CF6 /* SearchControllerComponent.swift in Sources */,
+				9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */,
 				9028DA9C2728B39F00FC7CF6 /* SearchViewBuilder.swift in Sources */,
 				9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */,
 				9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */,
 				9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */,
 				9028DA672727628500FC7CF6 /* WrapperCardData.swift in Sources */,
+				90722825272AEA680098FC6B /* UIApplication+Extension.swift in Sources */,
 				9028DA8827284CD400FC7CF6 /* SearchViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1016,6 +1116,14 @@
 				version = 6.2.0;
 			};
 		};
+		90722821272AE9E50098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1028,6 +1136,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		90722822272AE9E60098FC6B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90722821272AE9E50098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
