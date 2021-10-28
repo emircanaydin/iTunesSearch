@@ -15,7 +15,7 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 20
-        layout.minimumInteritemSpacing = 50
+        layout.minimumInteritemSpacing = 30
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         let temp = UICollectionView(frame: .zero, collectionViewLayout: layout)
         temp.translatesAutoresizingMaskIntoConstraints = false
@@ -23,13 +23,14 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         temp.dataSource = self
         temp.register(ItemCollectionCellView.self, forCellWithReuseIdentifier: ItemCollectionCellView.identifier)
         temp.register(LoadingCellView.self, forCellWithReuseIdentifier: LoadingCellView.identifier)
+        temp.layer.backgroundColor = ColorHelper.viewBackground.value.cgColor
         return temp
     }()
     
     // MARK: - Override Functions
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
-        addMajorViewComponents()
+        addViewComponents()
     }
     
     // MARK: - Private Functions
@@ -100,6 +101,7 @@ extension ItemCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
 extension ItemCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 180)
+        let width = (UIScreen.main.bounds.width - 100) / 2
+        return CGSize(width: width, height: 180)
     }
 }
