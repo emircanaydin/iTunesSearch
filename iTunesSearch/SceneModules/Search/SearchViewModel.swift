@@ -46,6 +46,9 @@ class SearchViewModel {
         return formatter.getSegmentedControllerData(with: self)
     }
     
+    func getSearchTerm() -> String {
+        return searchTerm
+    }
     
     // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {

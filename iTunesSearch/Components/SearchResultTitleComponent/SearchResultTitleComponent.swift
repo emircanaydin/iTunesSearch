@@ -31,7 +31,10 @@ class SearchResultTitleComponent: GenericBaseView<SearchResultTitleData> {
     override func loadDataView() {
         super.loadDataView()
         guard let data = returnData() else { return }
-        titleLabel.text = "Search results for \(data.searchTerm)"
+        
+        DispatchQueue.main.async {
+            self.titleLabel.text = "Search results for '\(data.searchTerm)'"
+        }
     }
     
     // MARK: - Private Methods
