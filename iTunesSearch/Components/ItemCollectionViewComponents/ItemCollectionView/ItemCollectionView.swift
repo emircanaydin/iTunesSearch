@@ -15,8 +15,8 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 20
-        layout.minimumInteritemSpacing = 30
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.minimumInteritemSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
         let temp = UICollectionView(frame: .zero, collectionViewLayout: layout)
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.delegate = self
