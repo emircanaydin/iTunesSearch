@@ -15,8 +15,8 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 20
-        layout.minimumInteritemSpacing = 30
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.minimumInteritemSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
         let temp = UICollectionView(frame: .zero, collectionViewLayout: layout)
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.delegate = self
@@ -101,7 +101,12 @@ extension ItemCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
 extension ItemCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if isLoadingCell(for: indexPath) {
+            return CGSize(width: UIScreen.main.bounds.width - 40, height: 50)
+        }
+        
         let width = (UIScreen.main.bounds.width - 100) / 2
-        return CGSize(width: width, height: 180)
+        return CGSize(width: width, height: 200)
     }
 }

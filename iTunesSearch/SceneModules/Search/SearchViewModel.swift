@@ -16,19 +16,22 @@ class SearchViewModel {
     
     private var formatter: SearchViewDataFormatterProtocol
     private var operationManager: SearchOperationManagerProtocol
+    private var lottieManager: LottieManagerProtocol
     
     private var viewData: SearchResponse?
     
     private var searchTerm: String!
+    private var mediaType: String = "musicTrack"
     
-    init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol) {
+    init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol, lottieManager: LottieManagerProtocol) {
         self.formatter = formatter
         self.operationManager = operationManager
+        self.lottieManager = lottieManager
         subscribeOperationMangerPublisher()
     }
     
     func search() {
-        operationManager.search(with: SearchRequest(term: searchTerm, entity: "musicTrack", offset: formatter.paginationInfo.offset))
+        operationManager.search(with: SearchRequest(term: searchTerm, entity: mediaType, offset: formatter.paginationInfo.offset))
     }
     
     func subscribeSearchViewState(with completion: @escaping SearchViewStateBlock) {
@@ -38,7 +41,14 @@ class SearchViewModel {
     func getSearchControllerComponentData() -> SearchControllerComponentData {
         return formatter.getSearchControllerComponentData(with: searchControllerTextChangeListener)
     }
- 
+    
+    func getSegmentedControlData() -> SegmentedControlData {
+        return formatter.getSegmentedControllerData(with: self)
+    }
+    
+    func getSearchTerm() -> String {
+        return searchTerm
+    }
     
     // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {
@@ -60,12 +70,10 @@ class SearchViewModel {
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
-        self?.formatter.clearData(with: { finish in
-            
-            guard finish else { return }
-            self?.searchTerm = (term ?? "").replacingOccurrences(of: " ", with: +)
-            self?.search()
-        })
+        self?.formatter.clearData()
+        self?.searchTerm = term ?? ""
+        self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
+        self?.search()
     }
 }
 
@@ -98,6 +106,15 @@ extension SearchViewModel: ItemProviderProtocol {
     func selectedItem(at index: Int) {
         // go to detail page
     }
+}
+
+extension SearchViewModel: SegmentedControlProtocol {
     
-    
+    func changeIndex(to index: Int) {
+        lottieManager.onPreExecute()
+        mediaType = formatter.getMediaType(with: index)
+        formatter.clearData()
+        search()
+        lottieManager.onPostExecute()
+    }
 }
