@@ -20,6 +20,7 @@ class SearchViewModel {
     private var viewData: SearchResponse?
     
     private var searchTerm: String!
+    private var mediaType: String = "musicTrack"
     
     init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol) {
         self.formatter = formatter
@@ -28,7 +29,7 @@ class SearchViewModel {
     }
     
     func search() {
-        operationManager.search(with: SearchRequest(term: searchTerm, entity: "musicTrack", offset: formatter.paginationInfo.offset))
+        operationManager.search(with: SearchRequest(term: searchTerm, entity: mediaType, offset: formatter.paginationInfo.offset))
     }
     
     func subscribeSearchViewState(with completion: @escaping SearchViewStateBlock) {
@@ -42,7 +43,7 @@ class SearchViewModel {
     func getSegmentedControlData() -> SegmentedControlData {
         return formatter.getSegmentedControllerData(with: self)
     }
- 
+    
     
     // MARK: - Private Methods
     private func subscribeOperationMangerPublisher() {
@@ -64,12 +65,11 @@ class SearchViewModel {
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
-        self?.formatter.clearData(with: { finish in
-            guard finish else { return }
-            self?.searchTerm = term ?? ""
-            self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
-            self?.search()
-        })
+        self?.formatter.clearData()
+        self?.searchTerm = term ?? ""
+        self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
+        self?.search()
+        
     }
 }
 
@@ -107,6 +107,8 @@ extension SearchViewModel: ItemProviderProtocol {
 extension SearchViewModel: SegmentedControlProtocol {
     
     func changeIndex(to index: Int) {
-        print(index)
+        mediaType = formatter.getMediaType(with: index)
+        formatter.clearData()
+        search()
     }
 }

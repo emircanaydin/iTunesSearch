@@ -45,11 +45,9 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         return list[index].trackId
     }
     
-    func clearData(with listener: @escaping (Bool) -> Void) {
-        listener(false)
+    func clearData() {
         self.paginationInfo.resultCount = 0
         self.list.removeAll()
-        listener(true)
     }
     
     func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData {
@@ -62,6 +60,21 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
                                     selectorTextColor: ColorHelper.selectorColor.value,
                                     buttonTitles: ["Music", "Movie", "Podcast", "Book"],
                                     indexListener: listener)
+    }
+    
+    func getMediaType(with index: Int) -> String {
+        switch index {
+        case 0:
+            return "musicTrack"
+        case 1:
+            return "movie"
+        case 2:
+            return "podcast"
+        case 3:
+            return "ebook"
+        default:
+            return "musicTrack"
+        }
     }
     
 }
