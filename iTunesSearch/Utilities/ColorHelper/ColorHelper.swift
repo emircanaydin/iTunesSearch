@@ -26,6 +26,9 @@ enum ColorHelper: GenericValueProtocol {
             return #colorLiteral(red: 0.2156862745, green: 0.2156862745, blue: 0.2156862745, alpha: 1)
         case .segmentedTextColor:
             return #colorLiteral(red: 0.6039215686, green: 0.6039215686, blue: 0.6039215686, alpha: 1)
+        case .purchaseGreen:
+            return #colorLiteral(red: 0.3882352941, green: 0.768627451, blue: 0.3607843137, alpha: 1)
+            
         }
     }
     
@@ -35,4 +38,5 @@ enum ColorHelper: GenericValueProtocol {
     case viewBackground
     case selectorColor
     case segmentedTextColor
+    case purchaseGreen
 }
