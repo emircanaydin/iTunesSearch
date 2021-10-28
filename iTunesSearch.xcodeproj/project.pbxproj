@@ -10,10 +10,8 @@
 		9028DA282726E31F00FC7CF6 /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA272726E31F00FC7CF6 /* EndpointHelper.swift */; };
 		9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA2C2726E4B500FC7CF6 /* GenericValueProtocol.swift */; };
 		9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA322726E63300FC7CF6 /* SearchRequest.swift */; };
-		9028DA362726E6FC00FC7CF6 /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 9028DA352726E6FC00FC7CF6 /* DefaultNetworkOperationPackage */; };
 		9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA372726E72C00FC7CF6 /* SearchServiceProvider.swift */; };
 		9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */; };
-		9028DA402726EEAD00FC7CF6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9028DA3F2726EEAD00FC7CF6 /* RxSwift */; };
 		9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA422726EFF600FC7CF6 /* ResponseModel.swift */; };
 		9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */; };
 		9028DA492727522800FC7CF6 /* CustomImageViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA482727522800FC7CF6 /* CustomImageViewComponentData.swift */; };
@@ -61,10 +59,12 @@
 		9072281B272AE94C0098FC6B /* LottieManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281A272AE94C0098FC6B /* LottieManagerProtocol.swift */; };
 		9072281D272AE95B0098FC6B /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281C272AE95B0098FC6B /* LottieManager.swift */; };
 		90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281F272AE9B00098FC6B /* LottieViewController.swift */; };
-		90722823272AE9E60098FC6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90722822272AE9E60098FC6B /* Lottie */; };
 		90722825272AEA680098FC6B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722824272AEA680098FC6B /* UIApplication+Extension.swift */; };
 		9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072282C272B0B460098FC6B /* SearchResultTitleData.swift */; };
 		9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */; };
+		90722832272B1A7C0098FC6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90722831272B1A7C0098FC6B /* Lottie */; };
+		90722835272B1A8D0098FC6B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90722834272B1A8D0098FC6B /* RxSwift */; };
+		90722838272B1A9C0098FC6B /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 90722837272B1A9C0098FC6B /* DefaultNetworkOperationPackage */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -157,9 +157,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9028DA402726EEAD00FC7CF6 /* RxSwift in Frameworks */,
-				9028DA362726E6FC00FC7CF6 /* DefaultNetworkOperationPackage in Frameworks */,
-				90722823272AE9E60098FC6B /* Lottie in Frameworks */,
+				90722835272B1A8D0098FC6B /* RxSwift in Frameworks */,
+				90722838272B1A9C0098FC6B /* DefaultNetworkOperationPackage in Frameworks */,
+				90722832272B1A7C0098FC6B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,9 +569,9 @@
 			);
 			name = iTunesSearch;
 			packageProductDependencies = (
-				9028DA352726E6FC00FC7CF6 /* DefaultNetworkOperationPackage */,
-				9028DA3F2726EEAD00FC7CF6 /* RxSwift */,
-				90722822272AE9E60098FC6B /* Lottie */,
+				90722831272B1A7C0098FC6B /* Lottie */,
+				90722834272B1A8D0098FC6B /* RxSwift */,
+				90722837272B1A9C0098FC6B /* DefaultNetworkOperationPackage */,
 			);
 			productName = iTunesSearch;
 			productReference = 903A791627263E50004A722C /* iTunesSearch.app */;
@@ -646,9 +646,9 @@
 			);
 			mainGroup = 903A790D27263E50004A722C;
 			packageReferences = (
-				9028DA342726E6FC00FC7CF6 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
-				9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				90722821272AE9E50098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				90722830272B1A7C0098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				90722833272B1A8D0098FC6B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				90722836272B1A9C0098FC6B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
 			);
 			productRefGroup = 903A791727263E50004A722C /* Products */;
 			projectDirPath = "";
@@ -1100,23 +1100,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9028DA342726E6FC00FC7CF6 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/emircanaydin/DefaultNetworkOperationPackage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 6.2.0;
-			};
-		};
-		90722821272AE9E50098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		90722830272B1A7C0098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -1124,23 +1108,39 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		90722833272B1A8D0098FC6B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		90722836272B1A9C0098FC6B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emircanaydin/DefaultNetworkOperationPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9028DA352726E6FC00FC7CF6 /* DefaultNetworkOperationPackage */ = {
+		90722831272B1A7C0098FC6B /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9028DA342726E6FC00FC7CF6 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;
-			productName = DefaultNetworkOperationPackage;
+			package = 90722830272B1A7C0098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
-		9028DA3F2726EEAD00FC7CF6 /* RxSwift */ = {
+		90722834272B1A8D0098FC6B /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9028DA3E2726EEAD00FC7CF6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 90722833272B1A8D0098FC6B /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		90722822272AE9E60098FC6B /* Lottie */ = {
+		90722837272B1A9C0098FC6B /* DefaultNetworkOperationPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 90722821272AE9E50098FC6B /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
+			package = 90722836272B1A9C0098FC6B /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;
+			productName = DefaultNetworkOperationPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
