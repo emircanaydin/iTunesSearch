@@ -67,6 +67,8 @@
 		90722838272B1A9C0098FC6B /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 90722837272B1A9C0098FC6B /* DefaultNetworkOperationPackage */; };
 		9072283B272B47480098FC6B /* LookupServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283A272B47480098FC6B /* LookupServiceProvider.swift */; };
 		9072283D272B47F90098FC6B /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283C272B47F90098FC6B /* LookupRequest.swift */; };
+		90722840272B49E20098FC6B /* LookupOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */; };
+		90722842272B4A2B0098FC6B /* LookupOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722841272B4A2B0098FC6B /* LookupOperationManager.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -151,6 +153,8 @@
 		9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleComponent.swift; sourceTree = "<group>"; };
 		9072283A272B47480098FC6B /* LookupServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupServiceProvider.swift; sourceTree = "<group>"; };
 		9072283C272B47F90098FC6B /* LookupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupRequest.swift; sourceTree = "<group>"; };
+		9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOperationManagerProtocol.swift; sourceTree = "<group>"; };
+		90722841272B4A2B0098FC6B /* LookupOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOperationManager.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			children = (
 				90722819272AE93C0098FC6B /* LottieManager */,
 				9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */,
+				9072283E272B49C40098FC6B /* LookupOperationManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -259,8 +264,8 @@
 		9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */ = {
 			isa = PBXGroup;
 			children = (
-				9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */,
 				9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */,
+				9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */,
 			);
 			path = SearchOperationManager;
 			sourceTree = "<group>";
@@ -556,6 +561,15 @@
 			path = LookupServiceProvider;
 			sourceTree = "<group>";
 		};
+		9072283E272B49C40098FC6B /* LookupOperationManager */ = {
+			isa = PBXGroup;
+			children = (
+				90722841272B4A2B0098FC6B /* LookupOperationManager.swift */,
+				9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */,
+			);
+			path = LookupOperationManager;
+			sourceTree = "<group>";
+		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +726,7 @@
 				9028DA982728992900FC7CF6 /* BaseSearchController.swift in Sources */,
 				9028DA76272838EB00FC7CF6 /* ItemCollectionView.swift in Sources */,
 				9028DA5A272756AF00FC7CF6 /* PriceContainerData.swift in Sources */,
+				90722842272B4A2B0098FC6B /* LookupOperationManager.swift in Sources */,
 				9028DA522727544100FC7CF6 /* CustomImageViewComponent.swift in Sources */,
 				90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */,
 				9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */,
@@ -754,6 +769,7 @@
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				9028DA94272892C000FC7CF6 /* SearchControllerComponent.swift in Sources */,
 				9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */,
+				90722840272B49E20098FC6B /* LookupOperationManagerProtocol.swift in Sources */,
 				9028DA9C2728B39F00FC7CF6 /* SearchViewBuilder.swift in Sources */,
 				9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */,
 				9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */,
