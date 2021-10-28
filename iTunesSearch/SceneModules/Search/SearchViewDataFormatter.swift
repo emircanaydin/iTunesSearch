@@ -62,4 +62,19 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
                                     indexListener: listener)
     }
     
+    func getMediaType(with index: Int) -> String {
+        switch index {
+        case 0:
+            return "musicTrack"
+        case 1:
+            return "movie"
+        case 2:
+            return "podcast"
+        case 3:
+            return "ebook"
+        default:
+            return "musicTrack"
+        }
+    }
+    
 }

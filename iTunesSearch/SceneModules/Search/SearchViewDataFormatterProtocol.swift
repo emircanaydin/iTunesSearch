@@ -19,4 +19,5 @@ protocol SearchViewDataFormatterProtocol {
     func clearData()
     func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData
     func getSegmentedControllerData(with listener: SegmentedControlProtocol) -> SegmentedControlData
+    func getMediaType(with index: Int) -> String
 }
