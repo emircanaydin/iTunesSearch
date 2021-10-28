@@ -41,6 +41,7 @@ class SegmentedControlComponent: GenericBaseView<SegmentedControlData> {
         self.selectorViewColor = data.selectorViewColor
         self.selectorTextColor = data.selectorTextColor
         self.buttonTitles = data.buttonTitles
+        self.delegate = data.indexListener
         
         selectorView.frame.origin.x = 0
         selectorView.frame.origin.y = 40
