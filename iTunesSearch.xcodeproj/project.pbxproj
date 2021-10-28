@@ -63,6 +63,8 @@
 		90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072281F272AE9B00098FC6B /* LottieViewController.swift */; };
 		90722823272AE9E60098FC6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90722822272AE9E60098FC6B /* Lottie */; };
 		90722825272AEA680098FC6B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722824272AEA680098FC6B /* UIApplication+Extension.swift */; };
+		9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072282C272B0B460098FC6B /* SearchResultTitleData.swift */; };
+		9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -143,6 +145,8 @@
 		9072281C272AE95B0098FC6B /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 		9072281F272AE9B00098FC6B /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
 		90722824272AEA680098FC6B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		9072282C272B0B460098FC6B /* SearchResultTitleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleData.swift; sourceTree = "<group>"; };
+		9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleComponent.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9072282B272B0B290098FC6B /* SearchResultTitleComponent */,
 				9072280D272AD7170098FC6B /* EmptyResultView */,
 				90D6E2652729ADD100764191 /* SegmentedControlComponent */,
 				9028DA8F2728925B00FC7CF6 /* SearchControllerComponent */,
@@ -528,6 +533,15 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		9072282B272B0B290098FC6B /* SearchResultTitleComponent */ = {
+			isa = PBXGroup;
+			children = (
+				9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */,
+				9072282C272B0B460098FC6B /* SearchResultTitleData.swift */,
+			);
+			path = SearchResultTitleComponent;
+			sourceTree = "<group>";
+		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +727,7 @@
 				90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
+				9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */,
 				9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */,
 				9028DA4E2727532000FC7CF6 /* GenericBaseView.swift in Sources */,
 				9028DA9A2728AEF700FC7CF6 /* SearchViewController.swift in Sources */,
@@ -722,6 +737,7 @@
 				9072280F272AD76B0098FC6B /* EmptyResultViewData.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				9028DA94272892C000FC7CF6 /* SearchControllerComponent.swift in Sources */,
+				9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */,
 				9028DA9C2728B39F00FC7CF6 /* SearchViewBuilder.swift in Sources */,
 				9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */,
 				9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */,
