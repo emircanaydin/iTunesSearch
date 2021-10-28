@@ -12,7 +12,8 @@ class SearchViewBuilder {
     class func build() -> UIViewController {
         let operationManager = SearchOperationManager.shared
         let formatter = SearchViewDataFormatter()
-        let viewModel = SearchViewModel(formatter: formatter, operationManager: operationManager)
+        let lottieManager = LottieManager()
+        let viewModel = SearchViewModel(formatter: formatter, operationManager: operationManager, lottieManager: lottieManager)
         let viewController = SearchViewController(viewModel: viewModel)
         
         viewController.title = "iTunesSearch"

@@ -9,7 +9,35 @@ import UIKit
 
 class SearchViewController: BaseViewController<SearchViewModel> {
     
-    private var searchResultCollection: ItemCollectionView!
+    private lazy var searchResultCollection: ItemCollectionView = {
+        let temp = ItemCollectionView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
+    
+    private lazy var segmentedControl: SegmentedControlComponent = {
+        let temp = SegmentedControlComponent()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        return temp
+    }()
+    
+    private lazy var searchResultTitleLabel: SearchResultTitleComponent = {
+        let temp = SearchResultTitleComponent()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
+    
+    private lazy var mainStackView: UIStackView = {
+        let temp = UIStackView(arrangedSubviews: [segmentedControl, searchResultTitleLabel, searchResultCollection])
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.axis = .vertical
+        temp.distribution = .fill
+        temp.alignment = .fill
+        temp.spacing = 10
+        return temp
+    }()
+    
     private var searchControllerComponent: SearchControllerComponent!
     
     override func prepareViewControllerConfigurations() {
@@ -25,18 +53,18 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     }
     
     private func addSearchResultCollection() {
-        searchResultCollection = ItemCollectionView()
-        searchResultCollection.translatesAutoresizingMaskIntoConstraints = false
         searchResultCollection.delegate = viewModel
         
-        view.addSubview(searchResultCollection)
+        segmentedControl.setData(by: viewModel.getSegmentedControlData())
+        
+        view.addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
             
-            searchResultCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            searchResultCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            searchResultCollection.topAnchor.constraint(equalTo: view.topAnchor),
-            searchResultCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
+            mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
     
@@ -47,6 +75,10 @@ class SearchViewController: BaseViewController<SearchViewModel> {
                 return
             case .done:
                 self?.searchResultCollection.reloadCollectionView()
+                
+                var searchTerm = self?.viewModel.getSearchTerm() ?? ""
+                searchTerm = searchTerm.replacingOccurrences(of: "+", with: " ")
+                self?.searchResultTitleLabel.setData(by: SearchResultTitleData(searchTerm: searchTerm))
             }
         }
     }
