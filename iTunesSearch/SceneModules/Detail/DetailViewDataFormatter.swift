@@ -11,36 +11,14 @@ class DetailViewDataFormatter: DetailViewDataFormatterProtocol {
     
     private var trackData: Wrapper?
     
-    func getTrackImageUrl() -> String? {
-        return trackData?.trackName
-    }
-    
-    func getTrackInfoData() -> TrackInfoComponentData? {
-        
-        guard let trackData = trackData else {
-            return nil
-        }
-
-        return TrackInfoComponentData(artistName: trackData.artistName, trackName: trackData.trackName)
-    }
-    
-    func getTrackPrice() -> Double? {
-        return trackData?.trackPrice
-    }
-    
-    func getDescription() -> String? {
-        return trackData?.longDescription
-    }
-    
-    func getCollectionBorderData() -> CollectionBorderData? {
-       
-        guard let trackData = trackData else {
-            return nil
-        }
-        
-        return CollectionBorderData(collectionName: trackData.collectionName ?? trackData.trackName,
-                                    releaseDate: trackData.releaseDate,
-                                    collectionPriceContainerData: PriceContainerData(trackPrice: trackData.collectionPrice ?? trackData.trackPrice))
+    func getDetailViewComponentData() -> DetailViewComponentData {
+        return DetailViewComponentData(imageData: CustomImageViewComponentData(imageUrl: trackData?.artworkUrl100 ?? ""),
+                                       trackInfoData: TrackInfoComponentData(artistName: trackData?.trackName  ?? "", trackName: trackData?.artistName ?? ""),
+                                       purchaseButtonData: PurchaseButtonData(price: trackData?.trackPrice ?? 0),
+                                       descriptionData: DescriptionData(description: trackData?.longDescription ?? ""),
+                                       collectionBorderData: CollectionBorderData(collectionName: (trackData?.collectionName ?? trackData?.trackName) ?? "",
+                                                                                  releaseDate: trackData?.releaseDate,
+                                                                                  collectionPriceContainerData: PriceContainerData(trackPrice: trackData?.collectionPrice ?? trackData?.trackPrice)))
     }
     
     func setData(with response: SearchResponse) {

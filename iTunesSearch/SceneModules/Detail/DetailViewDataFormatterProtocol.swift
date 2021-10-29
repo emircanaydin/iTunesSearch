@@ -9,10 +9,6 @@ import Foundation
 
 protocol DetailViewDataFormatterProtocol {
     
-    func getTrackImageUrl() -> String?
-    func getTrackInfoData() -> TrackInfoComponentData?
-    func getTrackPrice() -> Double?
-    func getDescription() -> String?
-    func getCollectionBorderData() -> CollectionBorderData?
+    func getDetailViewComponentData() -> DetailViewComponentData
     func setData(with response: SearchResponse)
 }

@@ -32,31 +32,9 @@ class DetailViewModel {
         viewStateCompletion = completion
     }
     
-    func getImageUrl() -> String? {
-       return formatter.getTrackImageUrl()
+    func getDetailViewData() -> DetailViewComponentData {
+        return formatter.getDetailViewComponentData()
     }
-    
-    func getTrackInfoData() -> TrackInfoComponentData? {
-        
-        guard formatter.getTrackInfoData() != nil else {
-            viewStateCompletion?(.failure)
-            return nil
-        }
-        
-        return formatter.getTrackInfoData()
-    }
-     
-     func getTrackPrice() -> Double? {
-         return formatter.getTrackPrice()
-     }
-     
-     func getDescription() -> String? {
-         return formatter.getDescription()
-     }
-     
-     func getCollectionBorderData() -> CollectionBorderData? {
-         return formatter.getCollectionBorderData()
-     }
     
     // MARK: - Private Methods
     

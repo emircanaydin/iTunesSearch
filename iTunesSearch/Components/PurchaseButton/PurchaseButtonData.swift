@@ -9,9 +9,9 @@ import Foundation
 
 class PurchaseButtonData {
     
-    private(set) var price: String
+    private(set) var price: Double
     
-    init(text: String) {
-        self.price = text
+    init(price: Double) {
+        self.price = price
     }
 }
