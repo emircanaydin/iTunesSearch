@@ -31,5 +31,6 @@ struct Wrapper: Codable {
     let trackPrice: Double?
     let collectionPrice: Double?
     let releaseDate: Date? = nil
+    let longDescription: String?
 }
 

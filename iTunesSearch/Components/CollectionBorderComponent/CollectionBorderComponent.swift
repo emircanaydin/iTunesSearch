@@ -106,12 +106,13 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         ])
     }
     
-    private func getReleaseYearFromReleaseData(date: String) -> String {
+    private func getReleaseYearFromReleaseData(date: Date?) -> String {
+        
+        guard let date = date else { return "-" }
+        
         let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss'Z'"
-        let releaseData = inputFormatter.date(from: date)
         inputFormatter.dateFormat = "yyyy"
-        let resultString = inputFormatter.string(from: releaseData!)
+        let resultString = inputFormatter.string(from: date)
         return resultString
     }
 }

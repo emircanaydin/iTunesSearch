@@ -12,7 +12,7 @@ class SearchViewModel {
     
     private let disposeBag = DisposeBag()
     
-    private var searchViewStateCompletion: SearchViewStateBlock?
+    private var viewStateCompletion: ViewStateBlock?
     
     private var formatter: SearchViewDataFormatterProtocol
     private var operationManager: SearchOperationManagerProtocol
@@ -34,8 +34,8 @@ class SearchViewModel {
         operationManager.search(with: SearchRequest(term: searchTerm, entity: mediaType, offset: formatter.paginationInfo.offset))
     }
     
-    func subscribeSearchViewState(with completion: @escaping SearchViewStateBlock) {
-        searchViewStateCompletion = completion
+    func subscribeSearchViewState(with completion: @escaping ViewStateBlock) {
+        viewStateCompletion = completion
     }
     
     func getSearchControllerComponentData() -> SearchControllerComponentData {
@@ -66,7 +66,7 @@ class SearchViewModel {
     private func dataHandler(with response: SearchResponse?) {
         formatter.paginationInfo.fetching = false
         viewData = response
-        searchViewStateCompletion?(.done)
+        viewStateCompletion?(.done)
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
