@@ -9,25 +9,35 @@ import Foundation
 
 class DetailViewDataFormatter: DetailViewDataFormatterProtocol {
     
-    private var trackData: Wrapper!
+    private var trackData: Wrapper?
     
-    func getTrackImageUrl() -> String {
-        return trackData.trackName
+    func getTrackImageUrl() -> String? {
+        return trackData?.trackName
     }
     
-    func getTrackInfoData() -> TrackInfoComponentData {
+    func getTrackInfoData() -> TrackInfoComponentData? {
+        
+        guard let trackData = trackData else {
+            return nil
+        }
+
         return TrackInfoComponentData(artistName: trackData.artistName, trackName: trackData.trackName)
     }
     
-    func getTrackPrice() -> Double {
-        return trackData?.trackPrice ?? 0
+    func getTrackPrice() -> Double? {
+        return trackData?.trackPrice
     }
     
     func getDescription() -> String? {
         return trackData?.longDescription
     }
     
-    func getCollectionBorderData() -> CollectionBorderData {
+    func getCollectionBorderData() -> CollectionBorderData? {
+       
+        guard let trackData = trackData else {
+            return nil
+        }
+        
         return CollectionBorderData(collectionName: trackData.collectionName ?? trackData.trackName,
                                     releaseDate: trackData.releaseDate,
                                     collectionPriceContainerData: PriceContainerData(trackPrice: trackData.collectionPrice ?? trackData.trackPrice))
