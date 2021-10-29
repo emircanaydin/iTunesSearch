@@ -69,6 +69,14 @@
 		9072283D272B47F90098FC6B /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283C272B47F90098FC6B /* LookupRequest.swift */; };
 		90722840272B49E20098FC6B /* LookupOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */; };
 		90722842272B4A2B0098FC6B /* LookupOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722841272B4A2B0098FC6B /* LookupOperationManager.swift */; };
+		90722845272B4E030098FC6B /* TrackInfoComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722844272B4E030098FC6B /* TrackInfoComponentData.swift */; };
+		90722847272B4E870098FC6B /* TrackInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722846272B4E870098FC6B /* TrackInfoComponent.swift */; };
+		9072284A272B62010098FC6B /* PurchaseButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722849272B62010098FC6B /* PurchaseButtonData.swift */; };
+		9072284C272B623E0098FC6B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072284B272B623E0098FC6B /* PurchaseButton.swift */; };
+		9072284F272B644F0098FC6B /* DescriptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072284E272B644F0098FC6B /* DescriptionData.swift */; };
+		90722851272B64790098FC6B /* DescriptionTextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722850272B64790098FC6B /* DescriptionTextBlock.swift */; };
+		90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722853272B65CE0098FC6B /* CollectionBorderData.swift */; };
+		90722856272B662E0098FC6B /* CollectionBorderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722855272B662E0098FC6B /* CollectionBorderComponent.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -155,6 +163,14 @@
 		9072283C272B47F90098FC6B /* LookupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupRequest.swift; sourceTree = "<group>"; };
 		9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOperationManagerProtocol.swift; sourceTree = "<group>"; };
 		90722841272B4A2B0098FC6B /* LookupOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOperationManager.swift; sourceTree = "<group>"; };
+		90722844272B4E030098FC6B /* TrackInfoComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoComponentData.swift; sourceTree = "<group>"; };
+		90722846272B4E870098FC6B /* TrackInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoComponent.swift; sourceTree = "<group>"; };
+		90722849272B62010098FC6B /* PurchaseButtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButtonData.swift; sourceTree = "<group>"; };
+		9072284B272B623E0098FC6B /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		9072284E272B644F0098FC6B /* DescriptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionData.swift; sourceTree = "<group>"; };
+		90722850272B64790098FC6B /* DescriptionTextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextBlock.swift; sourceTree = "<group>"; };
+		90722853272B65CE0098FC6B /* CollectionBorderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBorderData.swift; sourceTree = "<group>"; };
+		90722855272B662E0098FC6B /* CollectionBorderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBorderComponent.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -281,6 +297,10 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90722852272B65280098FC6B /* CollectionBorderComponent */,
+				9072284D272B643C0098FC6B /* DescriptionTextBlock */,
+				90722848272B61DF0098FC6B /* PurchaseButton */,
+				90722843272B4D1A0098FC6B /* TrackInfoComponent */,
 				9072282B272B0B290098FC6B /* SearchResultTitleComponent */,
 				9072280D272AD7170098FC6B /* EmptyResultView */,
 				90D6E2652729ADD100764191 /* SegmentedControlComponent */,
@@ -570,6 +590,42 @@
 			path = LookupOperationManager;
 			sourceTree = "<group>";
 		};
+		90722843272B4D1A0098FC6B /* TrackInfoComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722846272B4E870098FC6B /* TrackInfoComponent.swift */,
+				90722844272B4E030098FC6B /* TrackInfoComponentData.swift */,
+			);
+			path = TrackInfoComponent;
+			sourceTree = "<group>";
+		};
+		90722848272B61DF0098FC6B /* PurchaseButton */ = {
+			isa = PBXGroup;
+			children = (
+				90722849272B62010098FC6B /* PurchaseButtonData.swift */,
+				9072284B272B623E0098FC6B /* PurchaseButton.swift */,
+			);
+			path = PurchaseButton;
+			sourceTree = "<group>";
+		};
+		9072284D272B643C0098FC6B /* DescriptionTextBlock */ = {
+			isa = PBXGroup;
+			children = (
+				90722850272B64790098FC6B /* DescriptionTextBlock.swift */,
+				9072284E272B644F0098FC6B /* DescriptionData.swift */,
+			);
+			path = DescriptionTextBlock;
+			sourceTree = "<group>";
+		};
+		90722852272B65280098FC6B /* CollectionBorderComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722855272B662E0098FC6B /* CollectionBorderComponent.swift */,
+				90722853272B65CE0098FC6B /* CollectionBorderData.swift */,
+			);
+			path = CollectionBorderComponent;
+			sourceTree = "<group>";
+		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,9 +777,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9072284A272B62010098FC6B /* PurchaseButtonData.swift in Sources */,
 				9028DA922728929400FC7CF6 /* SearchControllerComponentData.swift in Sources */,
 				9028DA282726E31F00FC7CF6 /* EndpointHelper.swift in Sources */,
 				9028DA982728992900FC7CF6 /* BaseSearchController.swift in Sources */,
+				90722847272B4E870098FC6B /* TrackInfoComponent.swift in Sources */,
 				9028DA76272838EB00FC7CF6 /* ItemCollectionView.swift in Sources */,
 				9028DA5A272756AF00FC7CF6 /* PriceContainerData.swift in Sources */,
 				90722842272B4A2B0098FC6B /* LookupOperationManager.swift in Sources */,
@@ -742,6 +800,7 @@
 				90722811272AD7790098FC6B /* EmptyResultView.swift in Sources */,
 				9028DA50272753D600FC7CF6 /* CustomImageViewContainer.swift in Sources */,
 				9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */,
+				90722856272B662E0098FC6B /* CollectionBorderComponent.swift in Sources */,
 				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
 				90722818272AE9220098FC6B /* AtomicValue.swift in Sources */,
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
@@ -754,15 +813,20 @@
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */,
+				90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */,
 				90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
+				9072284C272B623E0098FC6B /* PurchaseButton.swift in Sources */,
+				9072284F272B644F0098FC6B /* DescriptionData.swift in Sources */,
+				90722845272B4E030098FC6B /* TrackInfoComponentData.swift in Sources */,
 				9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */,
 				9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */,
 				9028DA4E2727532000FC7CF6 /* GenericBaseView.swift in Sources */,
 				9028DA9A2728AEF700FC7CF6 /* SearchViewController.swift in Sources */,
 				9028DA6D2728361100FC7CF6 /* BaseCollectionViewCell.swift in Sources */,
 				9028DA492727522800FC7CF6 /* CustomImageViewComponentData.swift in Sources */,
+				90722851272B64790098FC6B /* DescriptionTextBlock.swift in Sources */,
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9072280F272AD76B0098FC6B /* EmptyResultViewData.swift in Sources */,
 				9072283D272B47F90098FC6B /* LookupRequest.swift in Sources */,
