@@ -80,6 +80,9 @@
 		9072285A272B7B600098FC6B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722859272B7B600098FC6B /* DetailViewModel.swift */; };
 		9072285D272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */; };
 		9072285F272B7DDF0098FC6B /* DetailViewDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */; };
+		90722861272C2C0A0098FC6B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722860272C2C0A0098FC6B /* DetailViewController.swift */; };
+		90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722863272C2D980098FC6B /* DetailViewComponent.swift */; };
+		90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -177,6 +180,9 @@
 		90722859272B7B600098FC6B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDataFormatterProtocol.swift; sourceTree = "<group>"; };
 		9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDataFormatter.swift; sourceTree = "<group>"; };
+		90722860272C2C0A0098FC6B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		90722863272C2D980098FC6B /* DetailViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
+		90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponentData.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90722862272C2D800098FC6B /* DetailViewComponent */,
 				90722852272B65280098FC6B /* CollectionBorderComponent */,
 				9072284D272B643C0098FC6B /* DescriptionTextBlock */,
 				90722848272B61DF0098FC6B /* PurchaseButton */,
@@ -636,6 +643,7 @@
 		90722857272B7A090098FC6B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				90722860272C2C0A0098FC6B /* DetailViewController.swift */,
 				90722859272B7B600098FC6B /* DetailViewModel.swift */,
 				9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */,
 				9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */,
@@ -649,6 +657,15 @@
 				9028DA8727284CD400FC7CF6 /* ViewState.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		90722862272C2D800098FC6B /* DetailViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722863272C2D980098FC6B /* DetailViewComponent.swift */,
+				90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */,
+			);
+			path = DetailViewComponent;
 			sourceTree = "<group>";
 		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
@@ -831,12 +848,15 @@
 				90722818272AE9220098FC6B /* AtomicValue.swift in Sources */,
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
 				9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */,
+				90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */,
+				90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */,
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
 				90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */,
 				9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */,
 				9028DA74272838E300FC7CF6 /* ItemCollectionViewData.swift in Sources */,
 				9028DA8527284CB100FC7CF6 /* SearchViewModel.swift in Sources */,
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
+				90722861272C2C0A0098FC6B /* DetailViewController.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */,
 				90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */,
