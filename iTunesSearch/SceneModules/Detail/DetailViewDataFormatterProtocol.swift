@@ -10,5 +10,5 @@ import Foundation
 protocol DetailViewDataFormatterProtocol {
     
     func getDetailViewComponentData() -> DetailViewComponentData
-    func setData(with response: SearchResponse)
+    func setData(with response: SearchResponse?)
 }

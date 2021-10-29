@@ -12,7 +12,7 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
     private lazy var mainStackView: UIStackView = {
         let temp = UIStackView(arrangedSubviews: [trackImage, trackInfo, purchaseButton, descriptionBlock, collectionBorderComponent])
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.alignment = .fill
+        temp.alignment = .center
         temp.distribution = .fill
         temp.axis = .vertical
         temp.spacing = 10
@@ -36,6 +36,8 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
     private lazy var purchaseButton: PurchaseButton = {
         let temp = PurchaseButton()
         temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        temp.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return temp
     }()
     
@@ -48,6 +50,7 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
     private lazy var collectionBorderComponent: CollectionBorderComponent = {
         let temp = CollectionBorderComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 60).isActive = true
         return temp
     }()
     
@@ -81,8 +84,7 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         
         NSLayoutConstraint.activate([
             
-            mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 40),
-            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            mainStackView.topAnchor.constraint(equalTo: topAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])

@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias DetailViewRequestBlock = (LookupRequest) -> Void
+
 struct LookupRequest: Codable {
     private (set) var id: Int
     

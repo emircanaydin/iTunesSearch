@@ -16,14 +16,12 @@ class DetailViewDataFormatter: DetailViewDataFormatterProtocol {
                                        trackInfoData: TrackInfoComponentData(artistName: trackData?.trackName  ?? "", trackName: trackData?.artistName ?? ""),
                                        purchaseButtonData: PurchaseButtonData(price: trackData?.trackPrice ?? 0),
                                        descriptionData: DescriptionData(description: trackData?.longDescription ?? ""),
-                                       collectionBorderData: CollectionBorderData(collectionName: (trackData?.collectionName ?? trackData?.trackName) ?? "",
-                                                                                  releaseDate: trackData?.releaseDate,
-                                                                                  collectionPriceContainerData: PriceContainerData(trackPrice: trackData?.collectionPrice ?? trackData?.trackPrice)))
+                                       collectionBorderData: CollectionBorderData(collectionName: (trackData?.collectionName ?? trackData?.trackName) ?? "", releaseDate: trackData?.releaseDate, collectionPriceContainerData: PriceContainerData(trackPrice: trackData?.collectionPrice ?? trackData?.trackPrice)))
     }
     
-    func setData(with response: SearchResponse) {
+    func setData(with response: SearchResponse?) {
         
-        guard response.resultCount > 0 else { return }
+        guard let response = response, response.resultCount > 0 else { return }
         
         trackData = response.results[0]
     }

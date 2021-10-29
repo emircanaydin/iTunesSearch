@@ -27,6 +27,8 @@ class TrackInfoComponent: GenericBaseView<TrackInfoComponentData> {
         temp.text = " "
         temp.contentMode = .center
         temp.textAlignment = .center
+        temp.numberOfLines = 0
+        temp.lineBreakMode = .byWordWrapping
         temp.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         return temp
     }()

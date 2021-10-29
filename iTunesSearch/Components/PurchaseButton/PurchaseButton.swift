@@ -23,7 +23,7 @@ class PurchaseButton: GenericBaseView<PurchaseButtonData> {
     private lazy var containerView: UIView = {
         let temp = UIView()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.layer.cornerRadius = 6
+        temp.layer.cornerRadius = 10
         temp.clipsToBounds = true
         temp.backgroundColor = ColorHelper.purchaseGreen.value
         return temp
@@ -36,6 +36,7 @@ class PurchaseButton: GenericBaseView<PurchaseButtonData> {
         temp.text = " "
         temp.contentMode = .center
         temp.textAlignment = .center
+        temp.textColor = .white
         return temp
     }()
     
@@ -54,7 +55,7 @@ class PurchaseButton: GenericBaseView<PurchaseButtonData> {
     override func loadDataView() {
         super.loadDataView()
         guard let data = returnData() else { return }
-        buttonLabel.text = "Purchase \(data.price)"
+        buttonLabel.text = "Purchase ₺\(data.price)"
     }
     
     // MARK: - Private Functions

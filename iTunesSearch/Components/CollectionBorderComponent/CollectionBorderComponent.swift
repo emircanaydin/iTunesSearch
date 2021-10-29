@@ -13,7 +13,8 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
     private lazy var containerView: UIView = {
        let temp = UIView()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.backgroundColor = .white
+        temp.backgroundColor = ColorHelper.viewBackground.value
+        temp.layer.cornerRadius = 6
         temp.layer.borderWidth = 1
         temp.layer.borderColor = ColorHelper.borderColor.value.cgColor
         return temp

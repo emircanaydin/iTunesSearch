@@ -83,6 +83,7 @@
 		90722861272C2C0A0098FC6B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722860272C2C0A0098FC6B /* DetailViewController.swift */; };
 		90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722863272C2D980098FC6B /* DetailViewComponent.swift */; };
 		90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */; };
+		90722868272C3A8A0098FC6B /* DetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -183,6 +184,7 @@
 		90722860272C2C0A0098FC6B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		90722863272C2D980098FC6B /* DetailViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
 		90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponentData.swift; sourceTree = "<group>"; };
+		90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewBuilder.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 				90722859272B7B600098FC6B /* DetailViewModel.swift */,
 				9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */,
 				9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */,
+				90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -868,6 +871,7 @@
 				90722845272B4E030098FC6B /* TrackInfoComponentData.swift in Sources */,
 				9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */,
 				9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */,
+				90722868272C3A8A0098FC6B /* DetailViewBuilder.swift in Sources */,
 				9028DA4E2727532000FC7CF6 /* GenericBaseView.swift in Sources */,
 				9028DA9A2728AEF700FC7CF6 /* SearchViewController.swift in Sources */,
 				9028DA6D2728361100FC7CF6 /* BaseCollectionViewCell.swift in Sources */,

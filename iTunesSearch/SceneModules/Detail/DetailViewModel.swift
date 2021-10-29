@@ -17,15 +17,19 @@ class DetailViewModel {
     private var formatter: DetailViewDataFormatterProtocol
     private var operationManager: LookupOperationManagerProtocol
     private var lottieManager: LottieManagerProtocol
+    private var lookupRequest: LookupRequest
     
-    init(formatter: DetailViewDataFormatterProtocol, operationManager: LookupOperationManagerProtocol, lottieManager: LottieManagerProtocol) {
+    init(lookupRequest: LookupRequest, formatter: DetailViewDataFormatterProtocol, operationManager: LookupOperationManagerProtocol, lottieManager: LottieManagerProtocol) {
+        self.lookupRequest = lookupRequest
         self.formatter = formatter
         self.operationManager = operationManager
         self.lottieManager = lottieManager
+        subscribeOperationMangerPublisher()
+        getDetailData()
     }
     
     func getDetailData() {
-        operationManager.getDetail(with: LookupRequest(id: 12))
+        operationManager.getDetail(with: lookupRequest)
     }
     
     func subscribeViewState(with completion: @escaping ViewStateBlock) {
@@ -51,6 +55,7 @@ class DetailViewModel {
     }
     
     private func dataHandler(with response: SearchResponse?) {
+        formatter.setData(with: response)
         viewStateCompletion?(.done)
     }
 }
