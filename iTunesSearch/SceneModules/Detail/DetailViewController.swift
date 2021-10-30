@@ -36,7 +36,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         view.backgroundColor = ColorHelper.viewBackground.value
         
         addComponents()
-        addViewStateListener()
+        addViewDataStateListener()
     }
     
     private func addComponents() {
@@ -74,12 +74,12 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         ])
     }
     
-    private func addViewStateListener() {
-        viewModel.subscribeViewState { [weak self] state in
+    private func addViewDataStateListener() {
+        viewModel.subscribeViewDataState { [weak self] state in
             switch state {
             case .failure, .loading:
                 break
-            case .done:
+            case .newData, .moreData:
                 DispatchQueue.main.async {
                     self?.detailViewComponent.setData(by: self?.viewModel.getDetailViewData())
                 }

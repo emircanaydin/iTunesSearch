@@ -54,6 +54,17 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         }
     }
     
+    func scrollToTop() {
+        DispatchQueue.main.async {
+            
+            guard self.delegate?.askNumberOfItem(in: 0) ?? 0 > 0 else { return }
+            
+            self.componentCollection.scrollToItem(at: IndexPath(row: 0, section: 0),
+                                              at: .top,
+                                        animated: true)
+        }
+    }
+    
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
         return delegate?.isLoadingCell(for: indexPath.row) ?? false
     }
@@ -106,7 +117,7 @@ extension ItemCollectionView: UICollectionViewDelegateFlowLayout {
             return CGSize(width: UIScreen.main.bounds.width - 40, height: 50)
         }
         
-        let width = (UIScreen.main.bounds.width - 100) / 2
+        let width = (UIScreen.main.bounds.width - 80) / 2
         return CGSize(width: width, height: 200)
     }
 }
