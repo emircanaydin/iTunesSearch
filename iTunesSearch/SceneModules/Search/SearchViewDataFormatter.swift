@@ -51,8 +51,8 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         self.list.removeAll()
     }
     
-    func getSearchControllerComponentData(textChangeListener: @escaping TextChangeBlock, cleanListener: @escaping VoidCompletionBlock) -> SearchControllerComponentData {
-        return SearchControllerComponentData().setTextChangeListener(by: textChangeListener).setCleanListener(by: cleanListener)
+    func getSearchControllerComponentData(with textChangeListener: @escaping TextChangeBlock) -> SearchControllerComponentData {
+        return SearchControllerComponentData().setTextChangeListener(by: textChangeListener)
     }
     
     func getSegmentedControllerData(with listener: SegmentedControlProtocol) -> SegmentedControlData {

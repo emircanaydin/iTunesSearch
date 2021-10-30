@@ -44,7 +44,7 @@ class SearchViewModel {
     }
     
     func getSearchControllerComponentData() -> SearchControllerComponentData {
-        return formatter.getSearchControllerComponentData(textChangeListener: searchControllerTextChangeListener, cleanListener: searchControllerCleanListener)
+        return formatter.getSearchControllerComponentData(with: searchControllerTextChangeListener)
     }
     
     func getSegmentedControlData() -> SegmentedControlData {
@@ -85,12 +85,6 @@ class SearchViewModel {
         self?.searchTerm = term ?? ""
         self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+") ?? ""
         self?.search()
-    }
-    
-    private lazy var searchControllerCleanListener: VoidCompletionBlock = { [weak self] in
-        self?.formatter.clearData()
-        self?.searchTerm = ""
-        self?.viewDataStateCompletion?(.newData)
     }
 }
 

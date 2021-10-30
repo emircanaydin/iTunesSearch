@@ -30,10 +30,6 @@ extension SearchControllerComponent: UISearchResultsUpdating {
         
         // Check if term count is more than 2
         guard let term = searchController.searchBar.text, term.count > 2, lastTerm != term else {
-            
-            // Clear list
-            viewModel.clearListener?()
-            lastTerm = ""
             return
         }
         

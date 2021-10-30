@@ -12,16 +12,10 @@ typealias VoidCompletionBlock = () -> Void
 
 class SearchControllerComponentData {
     
-    private(set) var clearListener: VoidCompletionBlock?
     private(set) var textChangeListener: TextChangeBlock?
     
     func setTextChangeListener(by listener: @escaping TextChangeBlock) -> Self {
         textChangeListener = listener
-        return self
-    }
-    
-    func setCleanListener(by listener: @escaping VoidCompletionBlock) -> Self {
-        clearListener = listener
         return self
     }
 }
