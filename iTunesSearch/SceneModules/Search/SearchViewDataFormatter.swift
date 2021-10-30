@@ -58,7 +58,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         return SegmentedControlData(textColor: ColorHelper.segmentedTextColor.value,
                                     selectorViewColor: ColorHelper.selectorColor.value,
                                     selectorTextColor: ColorHelper.selectorColor.value,
-                                    buttonTitles: ["Music", "Movie", "Podcast", "Book"],
+                                    buttonTitles: ["Music", "Movie", "App", "Book"],
                                     indexListener: listener)
     }
     
@@ -69,7 +69,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         case 1:
             return "movie"
         case 2:
-            return "podcast"
+            return "software"
         case 3:
             return "ebook"
         default:
