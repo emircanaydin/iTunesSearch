@@ -26,9 +26,8 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         temp.alignment = .leading
         temp.distribution = .fill
         temp.axis = .vertical
+        temp.spacing = 5
         temp.setCustomSpacing(10, after: borderTitle)
-        temp.setCustomSpacing(5, after: collectionNameLabel)
-        temp.setCustomSpacing(5, after: relaseDataLabel)
         return temp
     }()
     
@@ -39,7 +38,7 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         temp.text = "Collection With"
         temp.contentMode = .left
         temp.textAlignment = .left
-        temp.font = UIFont.systemFont(ofSize: 10, weight: .regular)
+        temp.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return temp
     }()
     
@@ -50,7 +49,7 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         temp.text = " "
         temp.contentMode = .left
         temp.textAlignment = .left
-        temp.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        temp.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         return temp
     }()
     
@@ -61,7 +60,7 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         temp.text = " "
         temp.contentMode = .left
         temp.textAlignment = .left
-        temp.font = UIFont.systemFont(ofSize: 10, weight: .regular)
+        temp.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return temp
     }()
     

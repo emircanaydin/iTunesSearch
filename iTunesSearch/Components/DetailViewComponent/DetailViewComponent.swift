@@ -16,6 +16,8 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         temp.distribution = .fill
         temp.axis = .vertical
         temp.spacing = 10
+        temp.setCustomSpacing(30, after: purchaseButton)
+        temp.setCustomSpacing(30, after: descriptionBlock)
         return temp
     }()
     
@@ -37,13 +39,14 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         let temp = PurchaseButton()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.widthAnchor.constraint(equalToConstant: 160).isActive = true
-        temp.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        temp.heightAnchor.constraint(equalToConstant: 40).isActive = true
         return temp
     }()
     
     private lazy var descriptionBlock: DescriptionTextBlock = {
         let temp = DescriptionTextBlock()
         temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 50).isActive = true
         return temp
     }()
     
