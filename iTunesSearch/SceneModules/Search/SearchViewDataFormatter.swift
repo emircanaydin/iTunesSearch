@@ -47,6 +47,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     
     func clearData() {
         self.paginationInfo.resultCount = 0
+        self.paginationInfo.offset = 0
         self.list.removeAll()
     }
     

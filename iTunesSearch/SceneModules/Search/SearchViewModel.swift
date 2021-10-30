@@ -119,7 +119,11 @@ extension SearchViewModel: SegmentedControlProtocol {
         lottieManager.onPreExecute()
         mediaType = formatter.getMediaType(with: index)
         formatter.clearData()
-        search()
+        
+        if searchTerm.count > 2 {
+            search()
+        }
+        
         lottieManager.onPostExecute()
     }
 }
