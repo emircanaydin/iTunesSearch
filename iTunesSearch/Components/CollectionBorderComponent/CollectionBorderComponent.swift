@@ -83,7 +83,7 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         self.collectionNameLabel.text = data.collectionName
         self.collectionPriceContainer.setData(by: data.collectionPriceContainerData)
         
-        let releaseYear = getReleaseYearFromReleaseData(date: data.releaseDate)
+        let releaseYear = getReleaseYearFromReleaseData(dateString: data.releaseDate)
         self.relaseDataLabel.text = "Release Year: \(releaseYear)"
     }
     
@@ -107,13 +107,18 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         ])
     }
     
-    private func getReleaseYearFromReleaseData(date: Date?) -> String {
+    private func getReleaseYearFromReleaseData(dateString: String?) -> String {
         
-        guard let date = date else { return "-" }
+        guard let dateString = dateString, dateString != "" else { return "-" }
         
         let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy"
-        let resultString = inputFormatter.string(from: date)
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        inputFormatter.locale = Locale(identifier: "en_US_POSIX")
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "yyyy"
+        
+        let date = inputFormatter.date(from: dateString)
+        let resultString = outputFormatter.string(from: date!)
         return resultString
     }
 }

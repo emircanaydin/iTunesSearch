@@ -30,7 +30,7 @@ struct Wrapper: Codable {
     let artworkUrl100: String
     let trackPrice: Double?
     let collectionPrice: Double?
-    let releaseDate: Date? = nil
-    let longDescription: String?
+    let releaseDate: String?
+    let description: String?
 }
 

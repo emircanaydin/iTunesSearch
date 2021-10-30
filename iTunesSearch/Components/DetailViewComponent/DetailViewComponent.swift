@@ -36,7 +36,7 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
     private lazy var purchaseButton: PurchaseButton = {
         let temp = PurchaseButton()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        temp.widthAnchor.constraint(equalToConstant: 160).isActive = true
         temp.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return temp
     }()

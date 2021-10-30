@@ -10,10 +10,10 @@ import Foundation
 class CollectionBorderData {
     
     private(set) var collectionName: String
-    private(set) var releaseDate: Date?
+    private(set) var releaseDate: String?
     private(set) var collectionPriceContainerData: PriceContainerData
     
-    init(collectionName: String, releaseDate: Date?, collectionPriceContainerData: PriceContainerData) {
+    init(collectionName: String, releaseDate: String?, collectionPriceContainerData: PriceContainerData) {
         self.collectionName = collectionName
         self.releaseDate = releaseDate
         self.collectionPriceContainerData = collectionPriceContainerData

@@ -9,8 +9,20 @@ import UIKit
 
 class DetailViewController: BaseViewController<DetailViewModel> {
     
-    private var detailViewComponent: DetailViewComponent!
+    private lazy var detailViewComponent: DetailViewComponent = {
+        let temp = DetailViewComponent()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
     
+    private lazy var scrollView: UIScrollView = {
+        let temp = UIScrollView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.backgroundColor = ColorHelper.viewBackground.value
+        temp.autoresizingMask = .flexibleHeight
+        return temp
+    }()
+
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         
@@ -21,16 +33,20 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     }
     
     private func addComponents() {
-        detailViewComponent = DetailViewComponent()
-        detailViewComponent.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(detailViewComponent)
+        view.addSubview(scrollView)
+        scrollView.addSubview(detailViewComponent)
         
         NSLayoutConstraint.activate([
-            detailViewComponent.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-            detailViewComponent.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            detailViewComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            detailViewComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            detailViewComponent.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 40),
+            detailViewComponent.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            detailViewComponent.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            detailViewComponent.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
         ])
     }
     

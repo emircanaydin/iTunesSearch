@@ -10,7 +10,8 @@ import Foundation
 typealias DetailViewRequestBlock = (LookupRequest) -> Void
 
 struct LookupRequest: Codable {
-    private (set) var id: Int
+    private(set) var id: Int
+    private(set) var country: String = "tr"
     
     init (id: Int) {
         self.id = id
