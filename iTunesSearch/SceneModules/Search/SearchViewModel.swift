@@ -12,7 +12,8 @@ class SearchViewModel {
     
     private let disposeBag = DisposeBag()
     
-    private var searchViewStateCompletion: SearchViewStateBlock?
+    private var viewStateCompletion: ViewStateBlock?
+    private var detailViewState: DetailViewRequestBlock?
     
     private var formatter: SearchViewDataFormatterProtocol
     private var operationManager: SearchOperationManagerProtocol
@@ -20,7 +21,7 @@ class SearchViewModel {
     
     private var viewData: SearchResponse?
     
-    private var searchTerm: String!
+    private var searchTerm: String = ""
     private var mediaType: String = "musicTrack"
     
     init(formatter: SearchViewDataFormatterProtocol, operationManager: SearchOperationManagerProtocol, lottieManager: LottieManagerProtocol) {
@@ -34,8 +35,12 @@ class SearchViewModel {
         operationManager.search(with: SearchRequest(term: searchTerm, entity: mediaType, offset: formatter.paginationInfo.offset))
     }
     
-    func subscribeSearchViewState(with completion: @escaping SearchViewStateBlock) {
-        searchViewStateCompletion = completion
+    func subscribeSearchViewState(with completion: @escaping ViewStateBlock) {
+        viewStateCompletion = completion
+    }
+    
+    func subscribeDetailViewState(with completion: @escaping DetailViewRequestBlock) {
+        detailViewState = completion
     }
     
     func getSearchControllerComponentData() -> SearchControllerComponentData {
@@ -66,13 +71,13 @@ class SearchViewModel {
     private func dataHandler(with response: SearchResponse?) {
         formatter.paginationInfo.fetching = false
         viewData = response
-        searchViewStateCompletion?(.done)
+        viewStateCompletion?(.done)
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
         self?.formatter.clearData()
         self?.searchTerm = term ?? ""
-        self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+")
+        self?.searchTerm = self?.searchTerm.replacingOccurrences(of: " ", with: "+") ?? ""
         self?.search()
     }
 }
@@ -104,7 +109,7 @@ extension SearchViewModel: ItemProviderProtocol {
     }
     
     func selectedItem(at index: Int) {
-        // go to detail page
+        detailViewState?(LookupRequest(id: formatter.getItemId(at: index)))
     }
 }
 

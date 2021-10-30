@@ -24,9 +24,12 @@ enum EndpointHelper {
             switch self {
             case .search:
                 return "search"
+            case.lookup:
+                return "lookup"
             }
         }
         
         case search
+        case lookup
     }
 }

@@ -81,5 +81,14 @@ class SearchViewController: BaseViewController<SearchViewModel> {
                 self?.searchResultTitleLabel.setData(by: SearchResultTitleData(searchTerm: searchTerm))
             }
         }
+        
+        viewModel.subscribeDetailViewState { [weak self] lookupRequest in
+            self?.fireDetailView(with: lookupRequest)
+        }
+    }
+    
+    private func fireDetailView(with lookupRequest: LookupRequest) {
+        let detailVC = DetailViewBuilder.build(with: lookupRequest)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

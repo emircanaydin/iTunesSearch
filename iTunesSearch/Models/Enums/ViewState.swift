@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias SearchViewStateBlock = (SearchViewState) -> Void
+typealias ViewStateBlock = (ViewState) -> Void
 
-enum SearchViewState {
+enum ViewState {
     case loading
     case done
     case failure
