@@ -25,7 +25,8 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         let temp = UIScrollView()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.backgroundColor = ColorHelper.viewBackground.value
-        temp.autoresizingMask = .flexibleHeight
+        temp.showsVerticalScrollIndicator = false
+        temp.delaysContentTouches = false
         return temp
     }()
 
@@ -44,23 +45,32 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         scrollView.addSubview(contentView)
         contentView.addSubview(detailViewComponent)
         
+        let contentViewCenterY = contentView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor)
+        contentViewCenterY.priority = .defaultLow
+
+        let contentViewHeight = contentView.heightAnchor.constraint(greaterThanOrEqualTo: view.heightAnchor)
+        contentViewHeight.priority = .defaultLow
+        
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+
+            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            contentViewCenterY,
+            contentViewHeight,
             
             detailViewComponent.topAnchor.constraint(equalTo: contentView.topAnchor),
             detailViewComponent.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            detailViewComponent.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            detailViewComponent.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
             detailViewComponent.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            
         ])
     }
     
@@ -72,7 +82,6 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             case .done:
                 DispatchQueue.main.async {
                     self?.detailViewComponent.setData(by: self?.viewModel.getDetailViewData())
-                    print(self?.detailViewComponent.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize))
                 }
             }
         }

@@ -75,7 +75,6 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         }
         
         descriptionBlock.setData(by: data.descriptionData)
-        
     }
     
     // MARK: - Private Methods
@@ -87,6 +86,7 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
             mainStackView.topAnchor.constraint(equalTo: topAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            mainStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor)
         ])
     }
     
