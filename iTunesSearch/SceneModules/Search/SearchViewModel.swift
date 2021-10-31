@@ -127,7 +127,7 @@ extension SearchViewModel: ItemProviderProtocol {
 
 extension SearchViewModel: SegmentedControlProtocol {
     
-    func changeIndex(to index: Int) {
+    func changeSelectedSegmentedIndex(to index: Int) {
         lottieManager.onPreExecute()
         mediaType = formatter.getMediaType(with: index)
         formatter.clearData()

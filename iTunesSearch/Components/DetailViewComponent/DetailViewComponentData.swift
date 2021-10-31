@@ -10,22 +10,22 @@ import Foundation
 class DetailViewComponentData {
 
     private(set) var imageData: CustomImageViewComponentData
-    private(set) var trackInfoData: TrackInfoComponentData
+    private(set) var trackInfoData: TrackTitleComponentData
     private(set) var purchaseButtonData: PurchaseButtonData
-    private(set) var descriptionData: DescriptionData
-    private(set) var collectionBorderData: CollectionBorderData
+    private(set) var descriptionData: DescriptionTextComponentData
+    private(set) var collectionContainerData: CollectionContainerComponentData
     
     init(imageData: CustomImageViewComponentData,
-         trackInfoData: TrackInfoComponentData,
+         trackInfoData: TrackTitleComponentData,
          purchaseButtonData: PurchaseButtonData,
-         descriptionData: DescriptionData,
-         collectionBorderData: CollectionBorderData) {
+         descriptionData: DescriptionTextComponentData,
+         collectionContainerData: CollectionContainerComponentData) {
         
         self.imageData = imageData
         self.trackInfoData = trackInfoData
         self.purchaseButtonData = purchaseButtonData
         self.descriptionData = descriptionData
-        self.collectionBorderData = collectionBorderData
+        self.collectionContainerData = collectionContainerData
     }
     
 }

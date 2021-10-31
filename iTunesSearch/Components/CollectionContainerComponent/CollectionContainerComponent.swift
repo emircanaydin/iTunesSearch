@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
+class CollectionContainerComponent: GenericBaseView<CollectionContainerComponentData> {
     
     private lazy var containerView: UIView = {
        let temp = UIView()
@@ -21,17 +21,17 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
     }()
     
     private lazy var componentStackView: UIStackView = {
-       let temp = UIStackView(arrangedSubviews: [borderTitle, collectionNameLabel, relaseDataLabel, collectionPriceContainer])
+       let temp = UIStackView(arrangedSubviews: [collectionTitle, collectionNameLabel, relaseDataLabel, collectionPriceContainer])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.alignment = .leading
         temp.distribution = .fill
         temp.axis = .vertical
         temp.spacing = 5
-        temp.setCustomSpacing(10, after: borderTitle)
+        temp.setCustomSpacing(10, after: collectionTitle)
         return temp
     }()
     
-    private lazy var borderTitle: UILabel = {
+    private lazy var collectionTitle: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.textColor = ColorHelper.borderColor.value

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemCollectionCellView: BaseCollectionViewCell {
+class ItemCollectionWrapperCellView: BaseCollectionViewCell {
     
     private lazy var wrapperCard: WrapperCard = {
         let temp = WrapperCard()

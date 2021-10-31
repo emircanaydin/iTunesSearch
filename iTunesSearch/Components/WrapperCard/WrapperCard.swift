@@ -29,8 +29,8 @@ class WrapperCard: GenericBaseView<GenericDataProtocol> {
         return temp
     }()
     
-    private lazy var wrapperInfo: WrapperInfoComponent = {
-        let temp = WrapperInfoComponent()
+    private lazy var wrapperInfo: WrapperCardInfoComponent = {
+        let temp = WrapperCardInfoComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()

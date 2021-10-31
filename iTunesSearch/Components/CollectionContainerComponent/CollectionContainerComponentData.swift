@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CollectionBorderData {
+class CollectionContainerComponentData {
     
     private(set) var collectionName: String
     private(set) var releaseDate: String?

@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class TrackInfoComponent: GenericBaseView<TrackInfoComponentData> {
+class TrackTitleComponent: GenericBaseView<TrackTitleComponentData> {
     
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [artistNameLabel, trackNameLabel])
+        let temp = UIStackView(arrangedSubviews: [titleLabel, subTitleLabel])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.alignment = .center
         temp.distribution = .fill
@@ -20,7 +20,7 @@ class TrackInfoComponent: GenericBaseView<TrackInfoComponentData> {
         return temp
     }()
     
-    private lazy var artistNameLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.textColor = ColorHelper.selectorColor.value
@@ -33,7 +33,7 @@ class TrackInfoComponent: GenericBaseView<TrackInfoComponentData> {
         return temp
     }()
     
-    private lazy var trackNameLabel: UILabel = {
+    private lazy var subTitleLabel: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.textColor = ColorHelper.segmentedTextColor.value
@@ -56,8 +56,8 @@ class TrackInfoComponent: GenericBaseView<TrackInfoComponentData> {
     override func loadDataView() {
         super.loadDataView()
         guard let data = returnData() else { return }
-        artistNameLabel.text = data.artistName
-        trackNameLabel.text = data.trackName
+        titleLabel.text = data.titleText
+        subTitleLabel.text = data.subTitleText
     }
     
     // MARK: - Private Functions

@@ -22,7 +22,7 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         temp.delegate = self
         temp.dataSource = self
         temp.keyboardDismissMode = .onDrag
-        temp.register(ItemCollectionCellView.self, forCellWithReuseIdentifier: ItemCollectionCellView.identifier)
+        temp.register(ItemCollectionWrapperCellView.self, forCellWithReuseIdentifier: ItemCollectionWrapperCellView.identifier)
         temp.register(LoadingCellView.self, forCellWithReuseIdentifier: LoadingCellView.identifier)
         temp.layer.backgroundColor = ColorHelper.viewBackground.value.cgColor
         return temp
@@ -103,7 +103,7 @@ extension ItemCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
         
         guard let data = delegate?.askData(at: indexPath.row) else { fatalError("Please provide at least one item!")}
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionCellView.identifier, for: indexPath) as? ItemCollectionCellView else { fatalError("Please provide  registered cell items")}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionWrapperCellView.identifier, for: indexPath) as? ItemCollectionWrapperCellView else { fatalError("Please provide  registered cell items")}
         cell.setData(by: data)
         return cell
     }

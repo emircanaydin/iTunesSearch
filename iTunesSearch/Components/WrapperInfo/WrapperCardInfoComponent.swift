@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WrapperInfoComponent: GenericBaseView<WrapperInfoComponentData> {
+class WrapperCardInfoComponent: GenericBaseView<WrapperCardInfoComponentData> {
     
     private lazy var stackView: UIStackView = {
         let temp = UIStackView(arrangedSubviews: [artistName, trackName, collectionName])

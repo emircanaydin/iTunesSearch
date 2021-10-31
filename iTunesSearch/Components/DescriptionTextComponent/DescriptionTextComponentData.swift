@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DescriptionData {
+class DescriptionTextComponentData {
     
     private(set) var description: String
     

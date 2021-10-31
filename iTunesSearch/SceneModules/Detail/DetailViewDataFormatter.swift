@@ -13,10 +13,10 @@ class DetailViewDataFormatter: DetailViewDataFormatterProtocol {
     
     func getDetailViewComponentData() -> DetailViewComponentData {
         return DetailViewComponentData(imageData: CustomImageViewComponentData(imageUrl: trackData?.artworkUrl100 ?? ""),
-                                       trackInfoData: TrackInfoComponentData(artistName: trackData?.trackName  ?? "", trackName: trackData?.artistName ?? ""),
+                                       trackInfoData: TrackTitleComponentData(titleText: trackData?.trackName  ?? "", subTitleText: trackData?.artistName ?? ""),
                                        purchaseButtonData: PurchaseButtonData(price: trackData?.trackPrice ?? 0),
-                                       descriptionData: DescriptionData(description: trackData?.description ?? ""),
-                                       collectionBorderData: CollectionBorderData(collectionName: (trackData?.collectionName ?? trackData?.trackName) ?? "", releaseDate: trackData?.releaseDate, collectionPriceContainerData: PriceContainerData(trackPrice: trackData?.collectionPrice ?? trackData?.trackPrice)))
+                                       descriptionData: DescriptionTextComponentData(description: trackData?.description ?? ""),
+                                       collectionContainerData: CollectionContainerComponentData(collectionName: (trackData?.collectionName ?? trackData?.trackName) ?? "", releaseDate: trackData?.releaseDate, collectionPriceContainerData: PriceContainerData(trackPrice: trackData?.collectionPrice ?? trackData?.trackPrice)))
     }
     
     func setData(with response: SearchResponse?) {

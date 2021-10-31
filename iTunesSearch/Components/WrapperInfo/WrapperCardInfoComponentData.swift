@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WrapperInfoComponentData {
+class WrapperCardInfoComponentData {
 
     private(set) var artistName: String
     private(set) var trackName: String

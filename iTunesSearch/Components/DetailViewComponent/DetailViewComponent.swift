@@ -10,7 +10,7 @@ import UIKit
 class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
     
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [trackImage, trackInfo, purchaseButton, descriptionBlock, collectionBorderComponent])
+        let temp = UIStackView(arrangedSubviews: [trackImage, trackInfo, purchaseButton, descriptionBlock, collectionContainer])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.alignment = .center
         temp.distribution = .fill
@@ -29,8 +29,8 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         return temp
     }()
     
-    private lazy var trackInfo: TrackInfoComponent = {
-        let temp = TrackInfoComponent()
+    private lazy var trackInfo: TrackTitleComponent = {
+        let temp = TrackTitleComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
@@ -43,15 +43,15 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         return temp
     }()
     
-    private lazy var descriptionBlock: DescriptionTextBlock = {
-        let temp = DescriptionTextBlock()
+    private lazy var descriptionBlock: DescriptionTextComponent = {
+        let temp = DescriptionTextComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 50).isActive = true
         return temp
     }()
     
-    private lazy var collectionBorderComponent: CollectionBorderComponent = {
-        let temp = CollectionBorderComponent()
+    private lazy var collectionContainer: CollectionContainerComponent = {
+        let temp = CollectionContainerComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 60).isActive = true
         return temp
@@ -70,7 +70,7 @@ class DetailViewComponent: GenericBaseView<DetailViewComponentData> {
         trackImage.setData(componentData: data.imageData)
         trackInfo.setData(by: data.trackInfoData)
         purchaseButton.setData(by: data.purchaseButtonData)
-        collectionBorderComponent.setData(by: data.collectionBorderData)
+        collectionContainer.setData(by: data.collectionContainerData)
         
         guard data.descriptionData.description != "" else {
             mainStackView.removeArrangedSubview(descriptionBlock)

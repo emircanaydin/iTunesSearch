@@ -35,7 +35,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     
     func getItem(at index: Int) -> GenericDataProtocol? {
         return WrapperCardData(imageData: CustomImageViewComponentData(imageUrl: list[index].artworkUrl100),
-                               wrapperInfoData: WrapperInfoComponentData(artistName: list[index].artistName,
+                               wrapperInfoData: WrapperCardInfoComponentData(artistName: list[index].artistName,
                                                                          trackName: list[index].trackName,
                                                                          collectionName: list[index].collectionName ?? list[index].trackName),
                                priceContainerData: PriceContainerData(trackPrice: list[index].trackPrice))

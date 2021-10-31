@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DescriptionTextBlock: GenericBaseView<DescriptionData> {
+class DescriptionTextComponent: GenericBaseView<DescriptionTextComponentData> {
     
     private lazy var descriptionLabel: UILabel = {
         let temp = UILabel()
