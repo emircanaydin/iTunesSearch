@@ -47,11 +47,12 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     
     func clearData() {
         self.paginationInfo.resultCount = 0
+        self.paginationInfo.offset = 0
         self.list.removeAll()
     }
     
-    func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData {
-        return SearchControllerComponentData().setTextChangeListener(by: listener)
+    func getSearchControllerComponentData(with textChangeListener: @escaping TextChangeBlock) -> SearchControllerComponentData {
+        return SearchControllerComponentData().setTextChangeListener(by: textChangeListener)
     }
     
     func getSegmentedControllerData(with listener: SegmentedControlProtocol) -> SegmentedControlData {

@@ -12,7 +12,7 @@ class SearchViewModel {
     
     private let disposeBag = DisposeBag()
     
-    private var viewStateCompletion: ViewStateBlock?
+    private var viewDataStateCompletion: ViewDataStateBlock?
     private var detailViewState: DetailViewRequestBlock?
     
     private var formatter: SearchViewDataFormatterProtocol
@@ -35,8 +35,8 @@ class SearchViewModel {
         operationManager.search(with: SearchRequest(term: searchTerm, entity: mediaType, offset: formatter.paginationInfo.offset))
     }
     
-    func subscribeSearchViewState(with completion: @escaping ViewStateBlock) {
-        viewStateCompletion = completion
+    func subscribeViewDataState(with completion: @escaping ViewDataStateBlock) {
+        viewDataStateCompletion = completion
     }
     
     func subscribeDetailViewState(with completion: @escaping DetailViewRequestBlock) {
@@ -71,7 +71,13 @@ class SearchViewModel {
     private func dataHandler(with response: SearchResponse?) {
         formatter.paginationInfo.fetching = false
         viewData = response
-        viewStateCompletion?(.done)
+        
+        // Check if data is new
+        if formatter.paginationInfo.offset != 0 {
+            viewDataStateCompletion?(.moreData)
+        } else {
+            viewDataStateCompletion?(.newData)
+        }
     }
     
     private lazy var searchControllerTextChangeListener: TextChangeBlock = { [weak self] term in
@@ -119,7 +125,11 @@ extension SearchViewModel: SegmentedControlProtocol {
         lottieManager.onPreExecute()
         mediaType = formatter.getMediaType(with: index)
         formatter.clearData()
-        search()
+        
+        if searchTerm.count > 2 {
+            search()
+        }
+        
         lottieManager.onPostExecute()
     }
 }

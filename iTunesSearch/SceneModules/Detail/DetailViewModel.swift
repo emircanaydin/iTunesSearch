@@ -12,7 +12,7 @@ class DetailViewModel {
     
     private let disposeBag = DisposeBag()
     
-    private var viewStateCompletion: ViewStateBlock?
+    private var viewDataStateCompletion: ViewDataStateBlock?
     
     private var formatter: DetailViewDataFormatterProtocol
     private var operationManager: LookupOperationManagerProtocol
@@ -32,8 +32,8 @@ class DetailViewModel {
         operationManager.getDetail(with: lookupRequest)
     }
     
-    func subscribeViewState(with completion: @escaping ViewStateBlock) {
-        viewStateCompletion = completion
+    func subscribeViewDataState(with completion: @escaping ViewDataStateBlock) {
+        viewDataStateCompletion = completion
     }
     
     func getDetailViewData() -> DetailViewComponentData {
@@ -47,7 +47,7 @@ class DetailViewModel {
             switch result {
             case .failure(let error):
                 print("error \(error)")
-                self?.viewStateCompletion?(.failure)
+                self?.viewDataStateCompletion?(.failure)
             case .success(let response):
                 self?.dataHandler(with: response)
             }
@@ -56,6 +56,6 @@ class DetailViewModel {
     
     private func dataHandler(with response: SearchResponse?) {
         formatter.setData(with: response)
-        viewStateCompletion?(.done)
+        viewDataStateCompletion?(.newData)
     }
 }

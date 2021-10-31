@@ -10,10 +10,14 @@ import UIKit
 
 class SearchControllerComponent: BaseSearchController<SearchControllerComponentData> {
     
+    private var searchWorkItem: DispatchWorkItem?
+    private var lastTerm = ""
+    
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         self.searchResultsUpdater = self
     }
+    
     
 }
 
@@ -21,11 +25,21 @@ class SearchControllerComponent: BaseSearchController<SearchControllerComponentD
 extension SearchControllerComponent: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
+        
+        searchWorkItem?.cancel()
+        
         // Check if term count is more than 2
-        guard let term = searchController.searchBar.text, term.count > 2 else {
+        guard let term = searchController.searchBar.text, term.count > 2, lastTerm != term else {
             return
         }
         
-        viewModel.textChangeListener?(term)
+        let newTask = DispatchWorkItem { [weak self] in
+            self?.lastTerm = term
+            self?.viewModel.textChangeListener?(term)
+        }
+        
+        self.searchWorkItem = newTask
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: newTask)
     }
 }

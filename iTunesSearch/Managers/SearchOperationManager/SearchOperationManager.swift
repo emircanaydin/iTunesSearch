@@ -28,7 +28,6 @@ class SearchOperationManager: SearchOperationManagerProtocol {
         
         do {
             let urlRequest = try SearchServiceProvider(searchRequest: searchRequest).returnUrlRequest()
-            APIManager.shared.cancelRequest()
             APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
         } catch let error {
             print("error \(error)")

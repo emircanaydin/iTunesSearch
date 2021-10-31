@@ -55,6 +55,12 @@ class PurchaseButton: GenericBaseView<PurchaseButtonData> {
     override func loadDataView() {
         super.loadDataView()
         guard let data = returnData() else { return }
+        
+        if data.price == 0 {
+            buttonLabel.text = "Purchase"
+            return
+        }
+        
         buttonLabel.text = "Purchase ₺\(data.price)"
     }
     
