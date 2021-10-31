@@ -84,8 +84,6 @@
 		90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722863272C2D980098FC6B /* DetailViewComponent.swift */; };
 		90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */; };
 		90722868272C3A8A0098FC6B /* DetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */; };
-		9073435E272DE77800EF48D0 /* ApiCallListenerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073435D272DE77800EF48D0 /* ApiCallListenerManager.swift */; };
-		90734360272DE88400EF48D0 /* ApiManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073435F272DE88400EF48D0 /* ApiManagerBuilder.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -187,8 +185,6 @@
 		90722863272C2D980098FC6B /* DetailViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
 		90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponentData.swift; sourceTree = "<group>"; };
 		90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewBuilder.swift; sourceTree = "<group>"; };
-		9073435D272DE77800EF48D0 /* ApiCallListenerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallListenerManager.swift; sourceTree = "<group>"; };
-		9073435F272DE88400EF48D0 /* ApiManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerBuilder.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -225,7 +221,6 @@
 		9028DA262726E2E600FC7CF6 /* NetworkModules */ = {
 			isa = PBXGroup;
 			children = (
-				9073435C272DE5C400EF48D0 /* ApiManagerBuilder */,
 				9028DA2E2726E55100FC7CF6 /* ServiceProviders */,
 				9028DA312726E60300FC7CF6 /* RequestModels */,
 				9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */,
@@ -676,15 +671,6 @@
 			path = DetailViewComponent;
 			sourceTree = "<group>";
 		};
-		9073435C272DE5C400EF48D0 /* ApiManagerBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				9073435D272DE77800EF48D0 /* ApiCallListenerManager.swift */,
-				9073435F272DE88400EF48D0 /* ApiManagerBuilder.swift */,
-			);
-			path = ApiManagerBuilder;
-			sourceTree = "<group>";
-		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,7 +852,6 @@
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
 				9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */,
 				90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */,
-				90734360272DE88400EF48D0 /* ApiManagerBuilder.swift in Sources */,
 				90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */,
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
 				90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */,
@@ -881,7 +866,6 @@
 				90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
-				9073435E272DE77800EF48D0 /* ApiCallListenerManager.swift in Sources */,
 				9072284C272B623E0098FC6B /* PurchaseButton.swift in Sources */,
 				9072284F272B644F0098FC6B /* DescriptionData.swift in Sources */,
 				90722845272B4E030098FC6B /* TrackInfoComponentData.swift in Sources */,
