@@ -12,7 +12,7 @@
   - DefaultNetworkOperationManager used to manage api request and implement networking layer. Its advantage over other libraries is that it can be edited by me. That's why I chose it.
   [https://github.com/emircanaydin/DefaultNetworkOperationPackage](https://github.com/emircanaydin/DefaultNetworkOperationPackage)
 
-## Description
+## Description
 
 - Application is written by using MVVM Design pattern. 
 - All user interface compoents are created by using programmatically programming to enchance reusability and to reduce maintenance effor. 
