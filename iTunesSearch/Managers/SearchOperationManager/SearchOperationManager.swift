@@ -29,9 +29,7 @@ class SearchOperationManager: SearchOperationManagerProtocol {
         do {
             let urlRequest = try SearchServiceProvider(searchRequest: searchRequest).returnUrlRequest()
             APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
-        } catch let error {
-            print("error \(error)")
-        }
+        } catch let error {}
     }
     
     private lazy var apiCallHandler: SearchResultBlock = { [weak self] result in

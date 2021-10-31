@@ -22,7 +22,6 @@ class CustomImageViewComponent: UIImageView {
     private func fireImageDownloadingRequest(_ url: URL, _ componentData: CustomImageViewComponentData) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                print("error : \(String(describing: error))")
                 return
             }
             

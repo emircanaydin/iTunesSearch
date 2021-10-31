@@ -46,7 +46,6 @@ class DetailViewModel {
         operationManager.subscribeDataPublisher { [weak self] result in
             switch result {
             case .failure(let error):
-                print("error \(error)")
                 self?.viewDataStateCompletion?(.failure)
             case .success(let response):
                 self?.dataHandler(with: response)

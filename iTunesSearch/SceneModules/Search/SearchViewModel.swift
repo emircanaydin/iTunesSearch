@@ -60,7 +60,6 @@ class SearchViewModel {
         operationManager.subscribeDataPublisher { [weak self] result in
             switch result {
             case .failure(let error):
-                print("error: \(error)")
             case .success(let response):
                 self?.formatter.setData(with: response)
                 self?.dataHandler(with: response)
