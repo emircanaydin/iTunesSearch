@@ -92,6 +92,12 @@ extension SearchViewModel: ItemProviderProtocol {
         return index >= formatter.getCount()
     }
     
+    func isDataEmpty(in section: Int) -> Bool {
+        guard formatter.getNumberOfItem(in: section) == 0 else { return false }
+        guard searchTerm.count > 2 else { return false }
+        return true
+    }
+    
     func getMoreData() {
         // Check to get more data
         guard formatter.paginationInfo.checkLoadingMore() else { return }

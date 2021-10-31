@@ -27,7 +27,14 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         return temp
     }()
     
+    private var emptyView: EmptyResultView!
+    
     // MARK: - Override Functions
+    override func setupViewConfigurations() {
+        super.setupViewConfigurations()
+        setupBackgroundView()
+    }
+    
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addViewComponents()
@@ -47,9 +54,19 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         ])
     }
     
+    private func setupBackgroundView() {
+        emptyView = EmptyResultView()
+        componentCollection.backgroundView = emptyView
+    }
+    
+    private func emptyViewActivationControl() {
+        emptyView.activationManager(by: self.delegate?.isDataEmpty(in: 0) ?? false)
+    }
+    
     // MARK: - Public Functions
     func reloadCollectionView() {
         DispatchQueue.main.async {
+            self.emptyViewActivationControl()
             self.componentCollection.reloadData()
         }
     }
