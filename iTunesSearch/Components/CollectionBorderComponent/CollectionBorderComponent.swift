@@ -49,6 +49,8 @@ class CollectionBorderComponent: GenericBaseView<CollectionBorderData> {
         temp.text = " "
         temp.contentMode = .left
         temp.textAlignment = .left
+        temp.numberOfLines = 0
+        temp.lineBreakMode = .byWordWrapping
         temp.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         return temp
     }()

@@ -17,7 +17,7 @@ class DescriptionTextBlock: GenericBaseView<DescriptionData> {
         temp.lineBreakMode = .byWordWrapping
         temp.numberOfLines = 0
         temp.contentMode = .center
-        temp.textAlignment = .center
+        temp.textAlignment = .left
         temp.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return temp
     }()
