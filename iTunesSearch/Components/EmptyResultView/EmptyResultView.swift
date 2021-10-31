@@ -8,21 +8,12 @@
 import UIKit
 
 class EmptyResultView: GenericBaseView<EmptyResultViewData> {
-    
-    private lazy var containerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 6
-        view.clipsToBounds = true
-        view.backgroundColor = .white
-        return view
-    }()
-    
+        
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [imageContainer])
+        let temp = UIStackView(arrangedSubviews: [imageContainer, infoLabel])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isUserInteractionEnabled = true
-        temp.alignment = .fill
+        temp.alignment = .center
         temp.distribution = .fill
         temp.axis = .vertical
         temp.spacing = 20
@@ -35,8 +26,21 @@ class EmptyResultView: GenericBaseView<EmptyResultViewData> {
         temp.layer.cornerRadius = 5
         temp.clipsToBounds = true
         temp.image = UIImage(named: "data_not_found")
-        temp.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        temp.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        temp.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        temp.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        return temp
+    }()
+    
+    private lazy var infoLabel: UILabel = {
+        let temp = UILabel()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.text = "No results were found. Please make another call."
+        temp.textAlignment = .center
+        temp.contentMode = .center
+        temp.font = UIFont.systemFont(ofSize: 22)
+        temp.numberOfLines = 0
+        temp.lineBreakMode = .byWordWrapping
+        temp.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80).isActive = true
         return temp
     }()
     
@@ -52,18 +56,14 @@ class EmptyResultView: GenericBaseView<EmptyResultViewData> {
     
     // MARK: - Private Methods
     private func addComponents() {
-        addSubview(containerView)
-        containerView.addSubview(mainStackView)
+        addSubview(mainStackView)
+        isHidden = true
         
         NSLayoutConstraint.activate([
         
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
-            mainStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            mainStackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
+            mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 40),
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
         
         ])
     }

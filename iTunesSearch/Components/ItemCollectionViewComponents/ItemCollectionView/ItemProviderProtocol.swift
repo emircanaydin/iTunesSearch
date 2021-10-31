@@ -15,10 +15,12 @@ protocol ItemProviderProtocol: AnyObject {
     func selectedItem(at index: Int)
     func getMoreData()
     func isLoadingCell(for index: Int) -> Bool
+    func isDataEmpty(in section: Int) -> Bool
 }
 
 extension ItemProviderProtocol {
     func selectedItem(at index: Int) { }
     func getMoreData() { }
     func isLoadingCell(for index: Int) -> Bool { return false }
+    func isDataEmpty(in section: Int) -> Bool { return true }
 }
