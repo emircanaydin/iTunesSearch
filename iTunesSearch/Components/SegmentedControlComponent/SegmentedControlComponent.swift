@@ -65,7 +65,7 @@ class SegmentedControlComponent: GenericBaseView<SegmentedControlData> {
             if btn == sender {
                 let selectorPosition = (UIScreen.main.bounds.width / 4) * CGFloat(buttonIndex)
                 selectedIndex = buttonIndex
-                delegate?.changeSelectedSegmentedIndex(to: selectedIndex)
+                delegate?.changeSelectedSegmentIndex(to: selectedIndex)
                 UIView.animate(withDuration: 0.3) {
                     self.selectorView.frame.origin.x = selectorPosition
                 }

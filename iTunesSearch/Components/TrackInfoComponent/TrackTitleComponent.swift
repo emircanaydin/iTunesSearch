@@ -36,7 +36,7 @@ class TrackTitleComponent: GenericBaseView<TrackTitleComponentData> {
     private lazy var subTitleLabel: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.textColor = ColorHelper.segmentedTextColor.value
+        temp.textColor = ColorHelper.segmentTextColor.value
         temp.text = " "
         temp.contentMode = .center
         temp.textAlignment = .center

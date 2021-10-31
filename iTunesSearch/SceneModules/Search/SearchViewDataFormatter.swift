@@ -56,7 +56,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     }
     
     func getSegmentedControllerData(with listener: SegmentedControlProtocol) -> SegmentedControlData {
-        return SegmentedControlData(textColor: ColorHelper.segmentedTextColor.value,
+        return SegmentedControlData(textColor: ColorHelper.segmentTextColor.value,
                                     selectorViewColor: ColorHelper.selectorColor.value,
                                     selectorTextColor: ColorHelper.selectorColor.value,
                                     buttonTitles: [.musicTrack, .movie, .software, .ebook],

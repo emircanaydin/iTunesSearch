@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SegmentedControlProtocol: AnyObject {
-    func changeSelectedSegmentedIndex(to index: Int)
+    func changeSelectedSegmentIndex(to index: Int)
 }

@@ -29,7 +29,7 @@ class LookupOperationManager: LookupOperationManagerProtocol {
         do {
             let urlRequest = try LookupServiceProvider(lookupRequest: lookupRequest).returnUrlRequest()
             APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
-        } catch let error { }
+        } catch _ { }
     }
     
     private lazy var apiCallHandler: LookupResultBlock = { [weak self] result in

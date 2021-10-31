@@ -12,7 +12,7 @@ class DescriptionTextComponent: GenericBaseView<DescriptionTextComponentData> {
     private lazy var descriptionLabel: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.textColor = ColorHelper.segmentedTextColor.value
+        temp.textColor = ColorHelper.segmentTextColor.value
         temp.text = " "
         temp.lineBreakMode = .byWordWrapping
         temp.numberOfLines = 0

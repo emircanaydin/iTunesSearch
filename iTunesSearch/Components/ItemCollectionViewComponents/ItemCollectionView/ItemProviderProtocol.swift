@@ -9,7 +9,6 @@ import Foundation
 
 protocol ItemProviderProtocol: AnyObject {
     
-    func askNumberOfSection() -> Int
     func askNumberOfItem(in section: Int) -> Int
     func askData(at index: Int) -> GenericDataProtocol?
     func selectedItem(at index: Int)

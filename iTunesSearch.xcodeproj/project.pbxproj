@@ -312,19 +312,18 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				90722862272C2D800098FC6B /* DetailViewComponent */,
+				9028DA472727521300FC7CF6 /* CustomImageView */,
+				90722843272B4D1A0098FC6B /* TrackInfoComponent */,
 				90722852272B65280098FC6B /* CollectionContainerComponent */,
 				9072284D272B643C0098FC6B /* DescriptionTextComponent */,
 				90722848272B61DF0098FC6B /* PurchaseButton */,
-				90722843272B4D1A0098FC6B /* TrackInfoComponent */,
+				90722862272C2D800098FC6B /* DetailViewComponent */,
 				9072282B272B0B290098FC6B /* SearchResultTitleComponent */,
-				9072280D272AD7170098FC6B /* EmptyResultView */,
 				90D6E2652729ADD100764191 /* SegmentedControlComponent */,
 				9028DA8F2728925B00FC7CF6 /* SearchControllerComponent */,
 				9028DA6E2728369800FC7CF6 /* ItemCollectionViewComponents */,
 				9028DA652727627900FC7CF6 /* WrapperCard */,
 				9028DA6027275E5400FC7CF6 /* WrapperInfo */,
-				9028DA472727521300FC7CF6 /* CustomImageView */,
 				9028DA582727568000FC7CF6 /* PriceContainer */,
 			);
 			path = Components;
@@ -409,6 +408,7 @@
 		9028DA6E2728369800FC7CF6 /* ItemCollectionViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9072280D272AD7170098FC6B /* EmptyResultView */,
 				9028DA72272838CA00FC7CF6 /* ItemCollectionView */,
 				9028DA71272838B900FC7CF6 /* ItemCollectionCellViews */,
 			);
@@ -499,8 +499,8 @@
 			children = (
 				9028DA292726E48F00FC7CF6 /* BaseModules */,
 				9028DA46272751EC00FC7CF6 /* Components */,
-				9028DA8227284BFC00FC7CF6 /* SceneModules */,
 				9028DA392726EE5600FC7CF6 /* Managers */,
+				9028DA8227284BFC00FC7CF6 /* SceneModules */,
 				9028DA262726E2E600FC7CF6 /* NetworkModules */,
 				9028DA412726EFE500FC7CF6 /* Models */,
 				9028DA54272754D900FC7CF6 /* Utilities */,
