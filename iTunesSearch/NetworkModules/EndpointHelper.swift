@@ -58,3 +58,19 @@ enum EndpointHelper {
         
     }
 }
+
+extension MediaTypes {
+    
+    func getMediaTypeTitle() -> String {
+        switch self {
+        case .musicTrack:
+            return "Music"
+        case .movie:
+            return "Movie"
+        case .software:
+            return "App"
+        case .ebook:
+            return "Book"
+        }
+    }
+}

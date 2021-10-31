@@ -12,7 +12,7 @@ class SegmentedControlComponent: GenericBaseView<SegmentedControlData> {
     private var buttons: [UIButton]!
     weak var delegate: SegmentedControlProtocol!
     
-    private var buttonTitles:[String]!
+    private var buttonTitles:[MediaTypes]!
     var textColor: UIColor!
     var selectorViewColor: UIColor!
     var selectorTextColor: UIColor!
@@ -80,7 +80,7 @@ class SegmentedControlComponent: GenericBaseView<SegmentedControlData> {
         
         for buttonTitle in buttonTitles {
             let button = UIButton(type: .system)
-            button.setTitle(buttonTitle, for: .normal)
+            button.setTitle(buttonTitle.getMediaTypeTitle(), for: .normal)
             button.addTarget(self, action:#selector(SegmentedControlComponent.buttonAction(sender:)), for: .touchUpInside)
             button.setTitleColor(textColor, for: .normal)
             buttons.append(button)
