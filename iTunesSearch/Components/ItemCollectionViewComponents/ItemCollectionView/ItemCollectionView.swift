@@ -21,6 +21,7 @@ class ItemCollectionView: GenericBaseView<ItemCollectionViewData> {
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.delegate = self
         temp.dataSource = self
+        temp.keyboardDismissMode = .onDrag
         temp.register(ItemCollectionCellView.self, forCellWithReuseIdentifier: ItemCollectionCellView.identifier)
         temp.register(LoadingCellView.self, forCellWithReuseIdentifier: LoadingCellView.identifier)
         temp.layer.backgroundColor = ColorHelper.viewBackground.value.cgColor
