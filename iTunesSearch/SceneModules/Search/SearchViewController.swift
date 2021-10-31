@@ -43,7 +43,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     override func prepareViewControllerConfigurations() {
         addSearchComponent()
         addSearchResultCollection()
-        addViewStateListener()
+        addListeners()
     }
     
     // MARK: - Private Methods
@@ -68,18 +68,30 @@ class SearchViewController: BaseViewController<SearchViewModel> {
         ])
     }
     
-    private func addViewStateListener() {
-        viewModel.subscribeSearchViewState { [weak self] state in
+    private func addListeners() {
+        viewModel.subscribeViewDataState { [weak self] state in
             switch state {
             case .loading, .failure:
                 return
-            case .done:
+            case .moreData:
                 self?.searchResultCollection.reloadCollectionView()
+            case .newData:
+                self?.searchResultCollection.reloadCollectionView()
+                self?.searchResultCollection.scrollToTop()
                 
                 var searchTerm = self?.viewModel.getSearchTerm() ?? ""
                 searchTerm = searchTerm.replacingOccurrences(of: "+", with: " ")
                 self?.searchResultTitleLabel.setData(by: SearchResultTitleData(searchTerm: searchTerm))
             }
         }
+        
+        viewModel.subscribeDetailViewState { [weak self] lookupRequest in
+            self?.fireDetailView(with: lookupRequest)
+        }
+    }
+    
+    private func fireDetailView(with lookupRequest: LookupRequest) {
+        let detailVC = DetailViewBuilder.build(with: lookupRequest)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

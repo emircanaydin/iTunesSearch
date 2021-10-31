@@ -7,10 +7,11 @@
 
 import Foundation
 
-typealias SearchViewStateBlock = (SearchViewState) -> Void
+typealias ViewDataStateBlock = (ViewDataState) -> Void
 
-enum SearchViewState {
+enum ViewDataState {
     case loading
-    case done
+    case newData
+    case moreData
     case failure
 }

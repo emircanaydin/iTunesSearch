@@ -47,18 +47,19 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
     
     func clearData() {
         self.paginationInfo.resultCount = 0
+        self.paginationInfo.offset = 0
         self.list.removeAll()
     }
     
-    func getSearchControllerComponentData(with listener: @escaping TextChangeBlock) -> SearchControllerComponentData {
-        return SearchControllerComponentData().setTextChangeListener(by: listener)
+    func getSearchControllerComponentData(with textChangeListener: @escaping TextChangeBlock) -> SearchControllerComponentData {
+        return SearchControllerComponentData().setTextChangeListener(by: textChangeListener)
     }
     
     func getSegmentedControllerData(with listener: SegmentedControlProtocol) -> SegmentedControlData {
         return SegmentedControlData(textColor: ColorHelper.segmentedTextColor.value,
                                     selectorViewColor: ColorHelper.selectorColor.value,
                                     selectorTextColor: ColorHelper.selectorColor.value,
-                                    buttonTitles: ["Music", "Movie", "Podcast", "Book"],
+                                    buttonTitles: ["Music", "Movie", "App", "Book"],
                                     indexListener: listener)
     }
     
@@ -69,7 +70,7 @@ class SearchViewDataFormatter: SearchViewDataFormatterProtocol {
         case 1:
             return "movie"
         case 2:
-            return "podcast"
+            return "software"
         case 3:
             return "ebook"
         default:

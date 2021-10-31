@@ -8,13 +8,14 @@
 import Foundation
 
 typealias TextChangeBlock = (String?) -> Void
+typealias VoidCompletionBlock = () -> Void
 
 class SearchControllerComponentData {
     
     private(set) var textChangeListener: TextChangeBlock?
     
-    func setTextChangeListener(by value: @escaping TextChangeBlock) -> Self {
-        textChangeListener = value
+    func setTextChangeListener(by listener: @escaping TextChangeBlock) -> Self {
+        textChangeListener = listener
         return self
     }
 }

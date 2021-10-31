@@ -41,6 +41,11 @@ class PriceContainer: GenericBaseView<PriceContainerData> {
         super.loadDataView()
         guard let data = returnData() else { return }
         
+        if data.trackPrice == 0 {
+            priceLabel.text = "FREE"
+            return
+        }
+        
         priceLabel.text = "₺\(data.trackPrice)"
     }
     

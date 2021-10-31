@@ -12,7 +12,7 @@
 		9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA322726E63300FC7CF6 /* SearchRequest.swift */; };
 		9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA372726E72C00FC7CF6 /* SearchServiceProvider.swift */; };
 		9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */; };
-		9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA422726EFF600FC7CF6 /* ResponseModel.swift */; };
+		9028DA432726EFF600FC7CF6 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA422726EFF600FC7CF6 /* ResponseModels.swift */; };
 		9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */; };
 		9028DA492727522800FC7CF6 /* CustomImageViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA482727522800FC7CF6 /* CustomImageViewComponentData.swift */; };
 		9028DA4C272752CE00FC7CF6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA4B272752CE00FC7CF6 /* BaseView.swift */; };
@@ -36,7 +36,7 @@
 		9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA7D272847A400FC7CF6 /* LoadingCellView.swift */; };
 		9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8027284A0300FC7CF6 /* UIView+Extensions.swift */; };
 		9028DA8527284CB100FC7CF6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8427284CB100FC7CF6 /* SearchViewModel.swift */; };
-		9028DA8827284CD400FC7CF6 /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8727284CD400FC7CF6 /* SearchViewState.swift */; };
+		9028DA8827284CD400FC7CF6 /* ViewDataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8727284CD400FC7CF6 /* ViewDataState.swift */; };
 		9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8927284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift */; };
 		9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */; };
 		9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9028DA8D27284F1000FC7CF6 /* SearchViewDataFormatter.swift */; };
@@ -65,6 +65,27 @@
 		90722832272B1A7C0098FC6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 90722831272B1A7C0098FC6B /* Lottie */; };
 		90722835272B1A8D0098FC6B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90722834272B1A8D0098FC6B /* RxSwift */; };
 		90722838272B1A9C0098FC6B /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 90722837272B1A9C0098FC6B /* DefaultNetworkOperationPackage */; };
+		9072283B272B47480098FC6B /* LookupServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283A272B47480098FC6B /* LookupServiceProvider.swift */; };
+		9072283D272B47F90098FC6B /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283C272B47F90098FC6B /* LookupRequest.swift */; };
+		90722840272B49E20098FC6B /* LookupOperationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */; };
+		90722842272B4A2B0098FC6B /* LookupOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722841272B4A2B0098FC6B /* LookupOperationManager.swift */; };
+		90722845272B4E030098FC6B /* TrackInfoComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722844272B4E030098FC6B /* TrackInfoComponentData.swift */; };
+		90722847272B4E870098FC6B /* TrackInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722846272B4E870098FC6B /* TrackInfoComponent.swift */; };
+		9072284A272B62010098FC6B /* PurchaseButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722849272B62010098FC6B /* PurchaseButtonData.swift */; };
+		9072284C272B623E0098FC6B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072284B272B623E0098FC6B /* PurchaseButton.swift */; };
+		9072284F272B644F0098FC6B /* DescriptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072284E272B644F0098FC6B /* DescriptionData.swift */; };
+		90722851272B64790098FC6B /* DescriptionTextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722850272B64790098FC6B /* DescriptionTextBlock.swift */; };
+		90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722853272B65CE0098FC6B /* CollectionBorderData.swift */; };
+		90722856272B662E0098FC6B /* CollectionBorderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722855272B662E0098FC6B /* CollectionBorderComponent.swift */; };
+		9072285A272B7B600098FC6B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722859272B7B600098FC6B /* DetailViewModel.swift */; };
+		9072285D272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */; };
+		9072285F272B7DDF0098FC6B /* DetailViewDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */; };
+		90722861272C2C0A0098FC6B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722860272C2C0A0098FC6B /* DetailViewController.swift */; };
+		90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722863272C2D980098FC6B /* DetailViewComponent.swift */; };
+		90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */; };
+		90722868272C3A8A0098FC6B /* DetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */; };
+		9073435E272DE77800EF48D0 /* ApiCallListenerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073435D272DE77800EF48D0 /* ApiCallListenerManager.swift */; };
+		90734360272DE88400EF48D0 /* ApiManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073435F272DE88400EF48D0 /* ApiManagerBuilder.swift */; };
 		90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2662729AE4100764191 /* SegmentedControlData.swift */; };
 		90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */; };
 		90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */; };
@@ -93,7 +114,7 @@
 		9028DA322726E63300FC7CF6 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		9028DA372726E72C00FC7CF6 /* SearchServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceProvider.swift; sourceTree = "<group>"; };
 		9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManagerProtocol.swift; sourceTree = "<group>"; };
-		9028DA422726EFF600FC7CF6 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		9028DA422726EFF600FC7CF6 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOperationManager.swift; sourceTree = "<group>"; };
 		9028DA482727522800FC7CF6 /* CustomImageViewComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentData.swift; sourceTree = "<group>"; };
 		9028DA4B272752CE00FC7CF6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -117,7 +138,7 @@
 		9028DA7D272847A400FC7CF6 /* LoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellView.swift; sourceTree = "<group>"; };
 		9028DA8027284A0300FC7CF6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		9028DA8427284CB100FC7CF6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		9028DA8727284CD400FC7CF6 /* SearchViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewState.swift; sourceTree = "<group>"; };
+		9028DA8727284CD400FC7CF6 /* ViewDataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataState.swift; sourceTree = "<group>"; };
 		9028DA8927284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataFormatterProtocol.swift; sourceTree = "<group>"; };
 		9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
 		9028DA8D27284F1000FC7CF6 /* SearchViewDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataFormatter.swift; sourceTree = "<group>"; };
@@ -147,6 +168,27 @@
 		90722824272AEA680098FC6B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		9072282C272B0B460098FC6B /* SearchResultTitleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleData.swift; sourceTree = "<group>"; };
 		9072282E272B0C840098FC6B /* SearchResultTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTitleComponent.swift; sourceTree = "<group>"; };
+		9072283A272B47480098FC6B /* LookupServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupServiceProvider.swift; sourceTree = "<group>"; };
+		9072283C272B47F90098FC6B /* LookupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupRequest.swift; sourceTree = "<group>"; };
+		9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOperationManagerProtocol.swift; sourceTree = "<group>"; };
+		90722841272B4A2B0098FC6B /* LookupOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupOperationManager.swift; sourceTree = "<group>"; };
+		90722844272B4E030098FC6B /* TrackInfoComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoComponentData.swift; sourceTree = "<group>"; };
+		90722846272B4E870098FC6B /* TrackInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoComponent.swift; sourceTree = "<group>"; };
+		90722849272B62010098FC6B /* PurchaseButtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButtonData.swift; sourceTree = "<group>"; };
+		9072284B272B623E0098FC6B /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		9072284E272B644F0098FC6B /* DescriptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionData.swift; sourceTree = "<group>"; };
+		90722850272B64790098FC6B /* DescriptionTextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextBlock.swift; sourceTree = "<group>"; };
+		90722853272B65CE0098FC6B /* CollectionBorderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBorderData.swift; sourceTree = "<group>"; };
+		90722855272B662E0098FC6B /* CollectionBorderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBorderComponent.swift; sourceTree = "<group>"; };
+		90722859272B7B600098FC6B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDataFormatterProtocol.swift; sourceTree = "<group>"; };
+		9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDataFormatter.swift; sourceTree = "<group>"; };
+		90722860272C2C0A0098FC6B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		90722863272C2D980098FC6B /* DetailViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponent.swift; sourceTree = "<group>"; };
+		90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponentData.swift; sourceTree = "<group>"; };
+		90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewBuilder.swift; sourceTree = "<group>"; };
+		9073435D272DE77800EF48D0 /* ApiCallListenerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallListenerManager.swift; sourceTree = "<group>"; };
+		9073435F272DE88400EF48D0 /* ApiManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerBuilder.swift; sourceTree = "<group>"; };
 		90D6E2662729AE4100764191 /* SegmentedControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlData.swift; sourceTree = "<group>"; };
 		90D6E2682729AE5900764191 /* SegmentedControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlComponent.swift; sourceTree = "<group>"; };
 		90D6E26A2729B43800764191 /* SegmentedControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlProtocol.swift; sourceTree = "<group>"; };
@@ -183,10 +225,11 @@
 		9028DA262726E2E600FC7CF6 /* NetworkModules */ = {
 			isa = PBXGroup;
 			children = (
-				9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */,
-				9028DA272726E31F00FC7CF6 /* EndpointHelper.swift */,
+				9073435C272DE5C400EF48D0 /* ApiManagerBuilder */,
 				9028DA2E2726E55100FC7CF6 /* ServiceProviders */,
 				9028DA312726E60300FC7CF6 /* RequestModels */,
+				9028DA8B27284DCC00FC7CF6 /* PaginationInfo.swift */,
+				9028DA272726E31F00FC7CF6 /* EndpointHelper.swift */,
 			);
 			path = NetworkModules;
 			sourceTree = "<group>";
@@ -221,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				9028DA2F2726E55F00FC7CF6 /* SearchServiceProvider */,
+				90722839272B472F0098FC6B /* LookupServiceProvider */,
 			);
 			path = ServiceProviders;
 			sourceTree = "<group>";
@@ -237,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				9028DA322726E63300FC7CF6 /* SearchRequest.swift */,
+				9072283C272B47F90098FC6B /* LookupRequest.swift */,
 			);
 			path = RequestModels;
 			sourceTree = "<group>";
@@ -246,6 +291,7 @@
 			children = (
 				90722819272AE93C0098FC6B /* LottieManager */,
 				9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */,
+				9072283E272B49C40098FC6B /* LookupOperationManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -253,8 +299,8 @@
 		9028DA3A2726EE5D00FC7CF6 /* SearchOperationManager */ = {
 			isa = PBXGroup;
 			children = (
-				9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */,
 				9028DA442726F18F00FC7CF6 /* SearchOperationManager.swift */,
+				9028DA3C2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift */,
 			);
 			path = SearchOperationManager;
 			sourceTree = "<group>";
@@ -262,7 +308,8 @@
 		9028DA412726EFE500FC7CF6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9028DA422726EFF600FC7CF6 /* ResponseModel.swift */,
+				9072285B272B7C620098FC6B /* Enums */,
+				9028DA422726EFF600FC7CF6 /* ResponseModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +317,11 @@
 		9028DA46272751EC00FC7CF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				90722862272C2D800098FC6B /* DetailViewComponent */,
+				90722852272B65280098FC6B /* CollectionBorderComponent */,
+				9072284D272B643C0098FC6B /* DescriptionTextBlock */,
+				90722848272B61DF0098FC6B /* PurchaseButton */,
+				90722843272B4D1A0098FC6B /* TrackInfoComponent */,
 				9072282B272B0B290098FC6B /* SearchResultTitleComponent */,
 				9072280D272AD7170098FC6B /* EmptyResultView */,
 				90D6E2652729ADD100764191 /* SegmentedControlComponent */,
@@ -399,6 +451,7 @@
 		9028DA8227284BFC00FC7CF6 /* SceneModules */ = {
 			isa = PBXGroup;
 			children = (
+				90722857272B7A090098FC6B /* Detail */,
 				9072281E272AE9970098FC6B /* Lottie */,
 				9028DA8327284C9800FC7CF6 /* Search */,
 			);
@@ -409,7 +462,6 @@
 			isa = PBXGroup;
 			children = (
 				9028DA8427284CB100FC7CF6 /* SearchViewModel.swift */,
-				9028DA8727284CD400FC7CF6 /* SearchViewState.swift */,
 				9028DA8927284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift */,
 				9028DA8D27284F1000FC7CF6 /* SearchViewDataFormatter.swift */,
 				9028DA992728AEF700FC7CF6 /* SearchViewController.swift */,
@@ -540,6 +592,97 @@
 				9072282C272B0B460098FC6B /* SearchResultTitleData.swift */,
 			);
 			path = SearchResultTitleComponent;
+			sourceTree = "<group>";
+		};
+		90722839272B472F0098FC6B /* LookupServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				9072283A272B47480098FC6B /* LookupServiceProvider.swift */,
+			);
+			path = LookupServiceProvider;
+			sourceTree = "<group>";
+		};
+		9072283E272B49C40098FC6B /* LookupOperationManager */ = {
+			isa = PBXGroup;
+			children = (
+				90722841272B4A2B0098FC6B /* LookupOperationManager.swift */,
+				9072283F272B49E20098FC6B /* LookupOperationManagerProtocol.swift */,
+			);
+			path = LookupOperationManager;
+			sourceTree = "<group>";
+		};
+		90722843272B4D1A0098FC6B /* TrackInfoComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722846272B4E870098FC6B /* TrackInfoComponent.swift */,
+				90722844272B4E030098FC6B /* TrackInfoComponentData.swift */,
+			);
+			path = TrackInfoComponent;
+			sourceTree = "<group>";
+		};
+		90722848272B61DF0098FC6B /* PurchaseButton */ = {
+			isa = PBXGroup;
+			children = (
+				90722849272B62010098FC6B /* PurchaseButtonData.swift */,
+				9072284B272B623E0098FC6B /* PurchaseButton.swift */,
+			);
+			path = PurchaseButton;
+			sourceTree = "<group>";
+		};
+		9072284D272B643C0098FC6B /* DescriptionTextBlock */ = {
+			isa = PBXGroup;
+			children = (
+				90722850272B64790098FC6B /* DescriptionTextBlock.swift */,
+				9072284E272B644F0098FC6B /* DescriptionData.swift */,
+			);
+			path = DescriptionTextBlock;
+			sourceTree = "<group>";
+		};
+		90722852272B65280098FC6B /* CollectionBorderComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722855272B662E0098FC6B /* CollectionBorderComponent.swift */,
+				90722853272B65CE0098FC6B /* CollectionBorderData.swift */,
+			);
+			path = CollectionBorderComponent;
+			sourceTree = "<group>";
+		};
+		90722857272B7A090098FC6B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				90722860272C2C0A0098FC6B /* DetailViewController.swift */,
+				90722859272B7B600098FC6B /* DetailViewModel.swift */,
+				9072285E272B7DDF0098FC6B /* DetailViewDataFormatter.swift */,
+				9072285C272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift */,
+				90722867272C3A8A0098FC6B /* DetailViewBuilder.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9072285B272B7C620098FC6B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9028DA8727284CD400FC7CF6 /* ViewDataState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		90722862272C2D800098FC6B /* DetailViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				90722863272C2D980098FC6B /* DetailViewComponent.swift */,
+				90722865272C2DAB0098FC6B /* DetailViewComponentData.swift */,
+			);
+			path = DetailViewComponent;
+			sourceTree = "<group>";
+		};
+		9073435C272DE5C400EF48D0 /* ApiManagerBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				9073435D272DE77800EF48D0 /* ApiCallListenerManager.swift */,
+				9073435F272DE88400EF48D0 /* ApiManagerBuilder.swift */,
+			);
+			path = ApiManagerBuilder;
 			sourceTree = "<group>";
 		};
 		90D6E2652729ADD100764191 /* SegmentedControlComponent */ = {
@@ -693,15 +836,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9072284A272B62010098FC6B /* PurchaseButtonData.swift in Sources */,
 				9028DA922728929400FC7CF6 /* SearchControllerComponentData.swift in Sources */,
 				9028DA282726E31F00FC7CF6 /* EndpointHelper.swift in Sources */,
 				9028DA982728992900FC7CF6 /* BaseSearchController.swift in Sources */,
+				90722847272B4E870098FC6B /* TrackInfoComponent.swift in Sources */,
 				9028DA76272838EB00FC7CF6 /* ItemCollectionView.swift in Sources */,
 				9028DA5A272756AF00FC7CF6 /* PriceContainerData.swift in Sources */,
+				90722842272B4A2B0098FC6B /* LookupOperationManager.swift in Sources */,
 				9028DA522727544100FC7CF6 /* CustomImageViewComponent.swift in Sources */,
 				90D6E2692729AE5900764191 /* SegmentedControlComponent.swift in Sources */,
 				9028DA6427275EBD00FC7CF6 /* WrapperInfoComponent.swift in Sources */,
-				9028DA432726EFF600FC7CF6 /* ResponseModel.swift in Sources */,
+				9028DA432726EFF600FC7CF6 /* ResponseModels.swift in Sources */,
+				9072283B272B47480098FC6B /* LookupServiceProvider.swift in Sources */,
 				9028DA332726E63300FC7CF6 /* SearchRequest.swift in Sources */,
 				9072281D272AE95B0098FC6B /* LottieManager.swift in Sources */,
 				9028DA57272754FA00FC7CF6 /* ImageCacheManager.swift in Sources */,
@@ -712,39 +859,56 @@
 				90722811272AD7790098FC6B /* EmptyResultView.swift in Sources */,
 				9028DA50272753D600FC7CF6 /* CustomImageViewContainer.swift in Sources */,
 				9028DA7E272847A400FC7CF6 /* LoadingCellView.swift in Sources */,
+				90722856272B662E0098FC6B /* CollectionBorderComponent.swift in Sources */,
+				9072285D272B7C900098FC6B /* DetailViewDataFormatterProtocol.swift in Sources */,
 				9028DA3D2726EE7500FC7CF6 /* SearchOperationManagerProtocol.swift in Sources */,
 				90722818272AE9220098FC6B /* AtomicValue.swift in Sources */,
 				9028DA8E27284F1000FC7CF6 /* SearchViewDataFormatter.swift in Sources */,
 				9028DA8C27284DCC00FC7CF6 /* PaginationInfo.swift in Sources */,
+				90722866272C2DAB0098FC6B /* DetailViewComponentData.swift in Sources */,
+				90734360272DE88400EF48D0 /* ApiManagerBuilder.swift in Sources */,
+				90722864272C2D980098FC6B /* DetailViewComponent.swift in Sources */,
 				9028DA5F2727578700FC7CF6 /* ColorHelper.swift in Sources */,
 				90D6E26B2729B43800764191 /* SegmentedControlProtocol.swift in Sources */,
 				9028DA452726F18F00FC7CF6 /* SearchOperationManager.swift in Sources */,
 				9028DA74272838E300FC7CF6 /* ItemCollectionViewData.swift in Sources */,
 				9028DA8527284CB100FC7CF6 /* SearchViewModel.swift in Sources */,
 				9028DA782728466C00FC7CF6 /* ItemProviderProtocol.swift in Sources */,
+				90722861272C2C0A0098FC6B /* DetailViewController.swift in Sources */,
 				903A791A27263E50004A722C /* AppDelegate.swift in Sources */,
 				90D6E2672729AE4100764191 /* SegmentedControlData.swift in Sources */,
+				90722854272B65CE0098FC6B /* CollectionBorderData.swift in Sources */,
 				90722820272AE9B00098FC6B /* LottieViewController.swift in Sources */,
 				9028DA6A2727630800FC7CF6 /* WrapperCard.swift in Sources */,
 				9028DA7C2728471700FC7CF6 /* GenericDataProtocol.swift in Sources */,
+				9073435E272DE77800EF48D0 /* ApiCallListenerManager.swift in Sources */,
+				9072284C272B623E0098FC6B /* PurchaseButton.swift in Sources */,
+				9072284F272B644F0098FC6B /* DescriptionData.swift in Sources */,
+				90722845272B4E030098FC6B /* TrackInfoComponentData.swift in Sources */,
 				9072282F272B0C840098FC6B /* SearchResultTitleComponent.swift in Sources */,
 				9028DA962728987E00FC7CF6 /* BaseViewController.swift in Sources */,
+				90722868272C3A8A0098FC6B /* DetailViewBuilder.swift in Sources */,
 				9028DA4E2727532000FC7CF6 /* GenericBaseView.swift in Sources */,
 				9028DA9A2728AEF700FC7CF6 /* SearchViewController.swift in Sources */,
 				9028DA6D2728361100FC7CF6 /* BaseCollectionViewCell.swift in Sources */,
+				9072285F272B7DDF0098FC6B /* DetailViewDataFormatter.swift in Sources */,
+				9072285A272B7B600098FC6B /* DetailViewModel.swift in Sources */,
 				9028DA492727522800FC7CF6 /* CustomImageViewComponentData.swift in Sources */,
+				90722851272B64790098FC6B /* DescriptionTextBlock.swift in Sources */,
 				9028DA2D2726E4B500FC7CF6 /* GenericValueProtocol.swift in Sources */,
 				9072280F272AD76B0098FC6B /* EmptyResultViewData.swift in Sources */,
+				9072283D272B47F90098FC6B /* LookupRequest.swift in Sources */,
 				9028DA382726E72C00FC7CF6 /* SearchServiceProvider.swift in Sources */,
 				9028DA94272892C000FC7CF6 /* SearchControllerComponent.swift in Sources */,
 				9072282D272B0B460098FC6B /* SearchResultTitleData.swift in Sources */,
+				90722840272B49E20098FC6B /* LookupOperationManagerProtocol.swift in Sources */,
 				9028DA9C2728B39F00FC7CF6 /* SearchViewBuilder.swift in Sources */,
 				9028DA8A27284D5500FC7CF6 /* SearchViewDataFormatterProtocol.swift in Sources */,
 				9028DA8127284A0300FC7CF6 /* UIView+Extensions.swift in Sources */,
 				9028DA6227275E7200FC7CF6 /* WrapperInfoComponentData.swift in Sources */,
 				9028DA672727628500FC7CF6 /* WrapperCardData.swift in Sources */,
 				90722825272AEA680098FC6B /* UIApplication+Extension.swift in Sources */,
-				9028DA8827284CD400FC7CF6 /* SearchViewState.swift in Sources */,
+				9028DA8827284CD400FC7CF6 /* ViewDataState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

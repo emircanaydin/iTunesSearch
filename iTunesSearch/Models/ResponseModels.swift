@@ -10,6 +10,8 @@ import DefaultNetworkOperationPackage
 
 typealias SearchResult = Result<SearchResponse, ErrorResponse>
 typealias SearchResultBlock = (Result<SearchResponse, ErrorResponse>) -> Void
+typealias LookupResult = Result<SearchResponse, ErrorResponse>
+typealias LookupResultBlock = (Result<SearchResponse, ErrorResponse>) -> Void
 
 // MARK: - SearchResponse
 struct SearchResponse: Codable {
@@ -28,6 +30,7 @@ struct Wrapper: Codable {
     let artworkUrl100: String
     let trackPrice: Double?
     let collectionPrice: Double?
-    let releaseDate: Date? = nil
+    let releaseDate: String?
+    let description: String?
 }
 
