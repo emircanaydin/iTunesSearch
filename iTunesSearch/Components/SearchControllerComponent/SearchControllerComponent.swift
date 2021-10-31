@@ -17,8 +17,6 @@ class SearchControllerComponent: BaseSearchController<SearchControllerComponentD
         super.prepareViewControllerConfigurations()
         self.searchResultsUpdater = self
     }
-    
-    
 }
 
 // MARK: - UISearchResultsUpdating
